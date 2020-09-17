@@ -988,6 +988,7 @@ public class MyDispatcherServlet extends MyFrameworkServlet {
                 // Determine handler adapter for the current request.
                 HandlerAdapter ha = getHandlerAdapter(mappedHandler.getHandler());
 
+                log.info("this.handlerAdapters={};ha={};", this.handlerAdapters, ha);
                 // Process last-modified header, if supported by the handler.
                 String method = request.getMethod();
                 boolean isGet = "GET".equals(method);
