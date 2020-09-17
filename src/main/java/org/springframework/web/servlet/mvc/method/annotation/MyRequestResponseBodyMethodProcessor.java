@@ -77,7 +77,7 @@ public class MyRequestResponseBodyMethodProcessor extends MyAbstractMessageConve
      * {@code ResponseBodyAdvice}.
      */
     public MyRequestResponseBodyMethodProcessor(List<HttpMessageConverter<?>> converters,
-                                              ContentNegotiationManager manager) {
+                                                ContentNegotiationManager manager) {
 
         super(converters, manager);
     }
@@ -86,10 +86,11 @@ public class MyRequestResponseBodyMethodProcessor extends MyAbstractMessageConve
      * Complete constructor for resolving {@code @RequestBody} method arguments.
      * For handling {@code @ResponseBody} consider also providing a
      * {@code ContentNegotiationManager}.
+     *
      * @since 4.2
      */
     public MyRequestResponseBodyMethodProcessor(List<HttpMessageConverter<?>> converters,
-                                              List<Object> requestResponseBodyAdvice) {
+                                                List<Object> requestResponseBodyAdvice) {
 
         super(converters, null, requestResponseBodyAdvice);
     }
@@ -99,7 +100,7 @@ public class MyRequestResponseBodyMethodProcessor extends MyAbstractMessageConve
      * {@code @ResponseBody}.
      */
     public MyRequestResponseBodyMethodProcessor(List<HttpMessageConverter<?>> converters,
-                                              ContentNegotiationManager manager, List<Object> requestResponseBodyAdvice) {
+                                                ContentNegotiationManager manager, List<Object> requestResponseBodyAdvice) {
 
         super(converters, manager, requestResponseBodyAdvice);
     }
@@ -118,9 +119,10 @@ public class MyRequestResponseBodyMethodProcessor extends MyAbstractMessageConve
 
     /**
      * Throws MethodArgumentNotValidException if validation fails.
+     *
      * @throws HttpMessageNotReadableException if {@link RequestBody#required()}
-     * is {@code true} and there is no body content or if there is no suitable
-     * converter to read the content with.
+     *                                         is {@code true} and there is no body content or if there is no suitable
+     *                                         converter to read the content with.
      */
     @Override
     public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer,
@@ -171,6 +173,8 @@ public class MyRequestResponseBodyMethodProcessor extends MyAbstractMessageConve
         mavContainer.setRequestHandled(true);
         ServletServerHttpRequest inputMessage = createInputMessage(webRequest);
         ServletServerHttpResponse outputMessage = createOutputMessage(webRequest);
+
+        log.info("returnValue={};returnType={};mavContainer={};webRequest={};", returnValue, returnType, mavContainer, webRequest);
 
         // Try even with null return value. ResponseBodyAdvice could get involved.
         writeWithMessageConverters(returnValue, returnType, inputMessage, outputMessage);
