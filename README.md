@@ -10,4 +10,8 @@ https://github.com/code4craft/netty-learning
 https://github.com/jwpttcg66/NettyGameServer
 
 
+mvn jetty:run -Pfrontend
+
+
+
 
