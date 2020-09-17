@@ -89,15 +89,15 @@ public class MyWebMvcConfigurer implements WebMvcConfigurer {
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
 
-        converters.add(new MappingJackson2HttpMessageConverter());
 
-        log.info("converters={};", converters);
 
     }
 
     @Override
     public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
+        converters.add(new MappingJackson2HttpMessageConverter());
 
+        log.info("converters={};", converters);
     }
 
     @Override
