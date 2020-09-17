@@ -1,0 +1,5 @@
+2020-09-17 18:13:55.137 [main] INFO  org.springframework.web.servlet.support.MyAbstractAnnotationConfigDispatcherServletInitializer:createRootApplicationContext:58 - configClasses=[class wjt.biz.BizConfig];
+2020-09-17 18:13:55.162 [main] INFO  org.springframework.web.servlet.support.MyAbstractAnnotationConfigDispatcherServletInitializer:createServletApplicationContext:77 - configClasses=[class wjt.web.WebConfig];
+2020-09-17 18:15:11.420 [main] INFO  org.springframework.web.servlet.support.MyAbstractAnnotationConfigDispatcherServletInitializer:createRootApplicationContext:58 - configClasses=[class wjt.biz.BizConfig];
+2020-09-17 18:15:11.447 [main] INFO  org.springframework.web.servlet.support.MyAbstractAnnotationConfigDispatcherServletInitializer:createServletApplicationContext:77 - configClasses=[class wjt.web.WebConfig];
+2020-09-17 18:15:11.459 [main] INFO  wjt.web.MyWebAppInitializer:getServletMappings:21 - wjt;
