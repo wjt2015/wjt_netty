@@ -1008,6 +1008,8 @@ public class MyDispatcherServlet extends MyFrameworkServlet {
                 // Actually invoke the handler.
                 mv = ha.handle(processedRequest, response, mappedHandler.getHandler());
 
+                log.info("response={};mv={};", response, mv);
+
                 if (asyncManager.isConcurrentHandlingStarted()) {
                     return;
                 }
