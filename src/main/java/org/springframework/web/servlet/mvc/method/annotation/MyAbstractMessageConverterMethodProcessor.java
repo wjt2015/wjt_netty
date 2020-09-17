@@ -103,7 +103,7 @@ public abstract class MyAbstractMessageConverterMethodProcessor extends MyAbstra
      * Constructor with list of converters and ContentNegotiationManager.
      */
     protected MyAbstractMessageConverterMethodProcessor(List<HttpMessageConverter<?>> converters,
-                                                      ContentNegotiationManager contentNegotiationManager) {
+                                                        ContentNegotiationManager contentNegotiationManager) {
 
         this(converters, contentNegotiationManager, null);
     }
@@ -113,7 +113,7 @@ public abstract class MyAbstractMessageConverterMethodProcessor extends MyAbstra
      * as request/response body advice instances.
      */
     protected MyAbstractMessageConverterMethodProcessor(List<HttpMessageConverter<?>> converters,
-                                                      ContentNegotiationManager manager, List<Object> requestResponseBodyAdvice) {
+                                                        ContentNegotiationManager manager, List<Object> requestResponseBodyAdvice) {
 
         super(converters, requestResponseBodyAdvice);
         this.contentNegotiationManager = (manager != null ? manager : new ContentNegotiationManager());
@@ -131,6 +131,7 @@ public abstract class MyAbstractMessageConverterMethodProcessor extends MyAbstra
 
     /**
      * Creates a new {@link HttpOutputMessage} from the given {@link NativeWebRequest}.
+     *
      * @param webRequest the web request to create an output message from
      * @return the output message
      */
@@ -153,18 +154,20 @@ public abstract class MyAbstractMessageConverterMethodProcessor extends MyAbstra
 
     /**
      * Writes the given return type to the given output message.
-     * @param value the value to write to the output message
-     * @param returnType the type of the value
-     * @param inputMessage the input messages. Used to inspect the {@code Accept} header.
+     *
+     * @param value         the value to write to the output message
+     * @param returnType    the type of the value
+     * @param inputMessage  the input messages. Used to inspect the {@code Accept} header.
      * @param outputMessage the output message to write to
-     * @throws IOException thrown in case of I/O errors
+     * @throws IOException                         thrown in case of I/O errors
      * @throws HttpMediaTypeNotAcceptableException thrown when the conditions indicated by {@code Accept} header on
-     * the request cannot be met by the message converters
+     *                                             the request cannot be met by the message converters
      */
     @SuppressWarnings("unchecked")
     protected <T> void writeWithMessageConverters(T value, MethodParameter returnType,
                                                   ServletServerHttpRequest inputMessage, ServletServerHttpResponse outputMessage)
             throws IOException, HttpMediaTypeNotAcceptableException, HttpMessageNotWritableException {
+
 
         Object outputValue;
         Class<?> valueType;
@@ -174,8 +177,7 @@ public abstract class MyAbstractMessageConverterMethodProcessor extends MyAbstra
             outputValue = value.toString();
             valueType = String.class;
             declaredType = String.class;
-        }
-        else {
+        } else {
             outputValue = value;
             valueType = getReturnValueType(outputValue, returnType);
             declaredType = getGenericType(returnType);
@@ -184,6 +186,9 @@ public abstract class MyAbstractMessageConverterMethodProcessor extends MyAbstra
         HttpServletRequest request = inputMessage.getServletRequest();
         List<MediaType> requestedMediaTypes = getAcceptableMediaTypes(request);
         List<MediaType> producibleMediaTypes = getProducibleMediaTypes(request, valueType, declaredType);
+
+        log.info("value={};returnTyp={};inputMessage={};outputMessage={};outputValue={};requestedMediaTypes={};producibleMediaTypes={};",
+                value, returnType, inputMessage, outputMessage, outputValue, requestedMediaTypes, producibleMediaTypes);
 
         if (outputValue != null && producibleMediaTypes.isEmpty()) {
             throw new IllegalArgumentException("No converter found for return value of type: " + valueType);
@@ -212,8 +217,7 @@ public abstract class MyAbstractMessageConverterMethodProcessor extends MyAbstra
             if (mediaType.isConcrete()) {
                 selectedMediaType = mediaType;
                 break;
-            }
-            else if (mediaType.equals(MediaType.ALL) || mediaType.equals(MEDIA_TYPE_APPLICATION)) {
+            } else if (mediaType.equals(MediaType.ALL) || mediaType.equals(MEDIA_TYPE_APPLICATION)) {
                 selectedMediaType = MediaType.APPLICATION_OCTET_STREAM;
                 break;
             }
@@ -239,8 +243,7 @@ public abstract class MyAbstractMessageConverterMethodProcessor extends MyAbstra
                         }
                         return;
                     }
-                }
-                else if (messageConverter.canWrite(valueType, selectedMediaType)) {
+                } else if (messageConverter.canWrite(valueType, selectedMediaType)) {
                     outputValue = (T) getAdvice().beforeBodyWrite(outputValue, returnType, selectedMediaType,
                             (Class<? extends HttpMessageConverter<?>>) messageConverter.getClass(),
                             inputMessage, outputMessage);
@@ -279,8 +282,7 @@ public abstract class MyAbstractMessageConverterMethodProcessor extends MyAbstra
     private Type getGenericType(MethodParameter returnType) {
         if (HttpEntity.class.isAssignableFrom(returnType.getParameterType())) {
             return ResolvableType.forType(returnType.getGenericParameterType()).getGeneric(0).getType();
-        }
-        else {
+        } else {
             return returnType.getGenericParameterType();
         }
     }
@@ -300,6 +302,7 @@ public abstract class MyAbstractMessageConverterMethodProcessor extends MyAbstra
      * <li>Media types of configured converters that can write the specific return value, or
      * <li>{@link MediaType#ALL}
      * </ul>
+     *
      * @since 4.2
      */
     @SuppressWarnings("unchecked")
@@ -307,22 +310,19 @@ public abstract class MyAbstractMessageConverterMethodProcessor extends MyAbstra
         Set<MediaType> mediaTypes = (Set<MediaType>) request.getAttribute(HandlerMapping.PRODUCIBLE_MEDIA_TYPES_ATTRIBUTE);
         if (!CollectionUtils.isEmpty(mediaTypes)) {
             return new ArrayList<MediaType>(mediaTypes);
-        }
-        else if (!this.allSupportedMediaTypes.isEmpty()) {
+        } else if (!this.allSupportedMediaTypes.isEmpty()) {
             List<MediaType> result = new ArrayList<MediaType>();
             for (HttpMessageConverter<?> converter : this.messageConverters) {
                 if (converter instanceof GenericHttpMessageConverter && declaredType != null) {
                     if (((GenericHttpMessageConverter<?>) converter).canWrite(declaredType, valueClass, null)) {
                         result.addAll(converter.getSupportedMediaTypes());
                     }
-                }
-                else if (converter.canWrite(valueClass, null)) {
+                } else if (converter.canWrite(valueClass, null)) {
                     result.addAll(converter.getSupportedMediaTypes());
                 }
             }
             return result;
-        }
-        else {
+        } else {
             return Collections.singletonList(MediaType.ALL);
         }
     }
@@ -360,8 +360,7 @@ public abstract class MyAbstractMessageConverterMethodProcessor extends MyAbstra
             if (status < 200 || status > 299) {
                 return;
             }
-        }
-        catch (Throwable ex) {
+        } catch (Throwable ex) {
             // ignore
         }
 
@@ -416,8 +415,7 @@ public abstract class MyAbstractMessageConverterMethodProcessor extends MyAbstra
         List<MediaType> mediaTypes = null;
         try {
             mediaTypes = this.pathStrategy.resolveMediaTypeKey(null, extension);
-        }
-        catch (HttpMediaTypeNotAcceptableException ex) {
+        } catch (HttpMediaTypeNotAcceptableException ex) {
             // Ignore
         }
         if (CollectionUtils.isEmpty(mediaTypes)) {

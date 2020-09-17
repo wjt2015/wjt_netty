@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dde6145a-e728-4da1-b66d-581b4b61e0d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/context/support/MyApplicationObjectSupport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/web/context/support/MyWebApplicationObjectSupport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/config/annotation/MyDelegatingWebMvcConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/mvc/method/MyAbstractHandlerMethodAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/mvc/method/annotation/MyAbstractMessageConverterMethodArgumentResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/mvc/method/annotation/MyRequestMappingHandlerAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/support/MyWebContentGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/logs/2020-09-17/info-log.log" beforeDir="false" afterPath="$PROJECT_DIR$/doc/logs/2020-09-17/info-log.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/MyDispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/MyDispatcherServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/config/annotation/MyWebMvcConfigurationSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/config/annotation/MyWebMvcConfigurationSupport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wjt/web/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wjt/web/WebConfig.java" afterDir="false" />
-    </list>
+    <list default="true" id="dde6145a-e728-4da1-b66d-581b4b61e0d3" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,8 +23,30 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestResponseBodyMethodProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="59" column="76" lean-forward="true" selection-start-line="59" selection-start-column="76" selection-end-line="59" selection-end-column="76" />
+            <state relative-caret-position="462">
+              <caret line="59" column="37" lean-forward="true" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/mvc/method/annotation/MyRequestMappingHandlerAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="341">
+              <caret line="687" column="36" lean-forward="true" selection-start-line="687" selection-start-column="36" selection-end-line="687" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/mvc/method/annotation/MyRequestResponseBodyMethodProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="401">
+              <caret line="60" column="6" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="6" />
+              <folding>
+                <element signature="e#3183#3184#0" expanded="true" />
+                <element signature="e#3216#3217#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -46,16 +55,25 @@
         <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/AbstractMessageConverterMethodProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
-              <caret line="61" column="61" lean-forward="true" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="61" />
+              <caret line="61" column="49" lean-forward="true" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/mvc/method/annotation/MyAbstractMessageConverterMethodProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="54" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
+            <state relative-caret-position="187">
+              <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+              <folding>
+                <element signature="e#2870#2878#0" expanded="true" />
+                <element signature="e#3136#3144#0" expanded="true" />
+                <element signature="e#3799#3807#0" expanded="true" />
+                <element signature="e#7276#7306#0" expanded="true" />
+                <element signature="e#13300#13342#0" expanded="true" />
+                <element signature="e#13840#13870#0" expanded="true" />
+                <element signature="e#17799#17829#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,6 +112,8 @@
       <find>DelegatingWebMvcConfiguration</find>
       <find>MyWebMvcConfigurationSupport</find>
       <find>AbstractMessageConverterMethodArgumentResolver</find>
+      <find>AbstractMessageConverterMethodProcessor</find>
+      <find>RequestResponseBodyMethodProcessor</find>
     </findStrings>
     <replaceStrings>
       <replace>MyWebMvcConfigurationSupport</replace>
@@ -104,6 +124,8 @@
       <replace>MyRequestMappingHandlerAdapter</replace>
       <replace>MyDelegatingWebMvcConfiguration</replace>
       <replace>MyAbstractMessageConverterMethodArgumentResolver</replace>
+      <replace>MyAbstractMessageConverterMethodProcessor</replace>
+      <replace>MyRequestResponseBodyMethodProcessor</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -128,9 +150,11 @@
         <option value="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/mvc/method/MyAbstractHandlerMethodAdapter.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/config/annotation/MyDelegatingWebMvcConfiguration.java" />
         <option value="$PROJECT_DIR$/src/main/java/wjt/web/WebConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/mvc/method/annotation/MyRequestMappingHandlerAdapter.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/config/annotation/MyWebMvcConfigurationSupport.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/mvc/method/annotation/MyAbstractMessageConverterMethodArgumentResolver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/mvc/method/annotation/MyAbstractMessageConverterMethodProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/mvc/method/annotation/MyRequestResponseBodyMethodProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/mvc/method/annotation/MyRequestMappingHandlerAdapter.java" />
       </list>
     </option>
   </component>
@@ -323,7 +347,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1600355078547" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1600355298294" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -359,15 +383,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600334605502</updated>
-      <workItem from="1600334609783" duration="7915000" />
+      <workItem from="1600334609783" duration="8219000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7915000" />
+    <option name="totallyTimeSpent" value="8219000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1530" y="23" width="1690" height="911" extended-state="0" />
+    <frame x="1544" y="25" width="1690" height="911" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
@@ -378,14 +403,14 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17354369" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Terminal" weight="0.22513813" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.22466423" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" weight="0.32872927" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" weight="0.32872927" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.23809524" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.23809524" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -406,20 +431,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.8.RELEASE/spring-web-4.3.8.RELEASE-sources.jar!/org/springframework/web/bind/annotation/RequestMapping.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="352" column="20" selection-start-line="352" selection-start-column="20" selection-end-line="352" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE-sources.jar!/org/springframework/web/servlet/support/AbstractAnnotationConfigDispatcherServletInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-200">
-          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/servlet/MyDispatcherServlet.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -727,21 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/mvc/method/annotation/MyRequestMappingHandlerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="119" column="36" lean-forward="true" selection-start-line="119" selection-start-column="36" selection-end-line="119" selection-end-column="36" />
-          <folding>
-            <element signature="e#7191#7199#0" expanded="true" />
-            <element signature="e#8160#8196#0" expanded="true" />
-            <element signature="e#8287#8310#0" expanded="true" />
-            <element signature="e#8427#8462#0" expanded="true" />
-            <element signature="e#8555#8578#0" expanded="true" />
-            <element signature="e#8699#8734#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/config/annotation/MyDelegatingWebMvcConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -801,17 +797,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestResponseBodyMethodProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="59" column="76" lean-forward="true" selection-start-line="59" selection-start-column="76" selection-end-line="59" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/AbstractMessageConverterMethodProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
-          <caret line="61" column="61" lean-forward="true" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="61" />
+          <caret line="61" column="49" lean-forward="true" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/mvc/method/annotation/MyAbstractMessageConverterMethodProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+          <folding>
+            <element signature="e#2870#2878#0" expanded="true" />
+            <element signature="e#3136#3144#0" expanded="true" />
+            <element signature="e#3799#3807#0" expanded="true" />
+            <element signature="e#7276#7306#0" expanded="true" />
+            <element signature="e#13300#13342#0" expanded="true" />
+            <element signature="e#13840#13870#0" expanded="true" />
+            <element signature="e#17799#17829#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/mvc/method/annotation/MyRequestResponseBodyMethodProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="60" column="6" selection-start-line="60" selection-start-column="6" selection-end-line="60" selection-end-column="6" />
+          <folding>
+            <element signature="e#3183#3184#0" expanded="true" />
+            <element signature="e#3216#3217#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestResponseBodyMethodProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="59" column="37" lean-forward="true" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/mvc/method/annotation/MyRequestMappingHandlerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="687" column="36" lean-forward="true" selection-start-line="687" selection-start-column="36" selection-end-line="687" selection-end-column="36" />
         </state>
       </provider>
     </entry>
