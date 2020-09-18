@@ -9,12 +9,16 @@ import io.netty.util.CharsetUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 @Slf4j
 @Service
 @ChannelHandler.Sharable
 public class EchoClientHandler implements ChannelInboundHandler {
 
     private final ByteBuf firstMsg;
+
+    private final AtomicInteger count=new AtomicInteger(10);
 
     public EchoClientHandler() {
         firstMsg= Unpooled.buffer(1024);
@@ -52,6 +56,9 @@ public class EchoClientHandler implements ChannelInboundHandler {
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
         ctx.flush();
+        if(count.decrementAndGet()<=0){
+            ctx.close();
+        }
     }
 
     @Override
