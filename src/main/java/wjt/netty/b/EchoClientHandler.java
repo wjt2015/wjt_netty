@@ -1,5 +1,7 @@
 package wjt.netty.b;
 
+import io.netty.buffer.ByteBuf;
+import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandler;
@@ -9,7 +11,18 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 @ChannelHandler.Sharable
-public class EchoServerHandler implements ChannelInboundHandler {
+public class EchoClientHandler implements ChannelInboundHandler {
+
+    private final ByteBuf firstMsg;
+
+    public EchoClientHandler() {
+        firstMsg= Unpooled.buffer(1024);
+        for (int i=0;i<firstMsg.capacity();i++){
+            firstMsg.writeInt(i);
+        }
+
+    }
+
     @Override
     public void channelRegistered(ChannelHandlerContext ctx) throws Exception {
 
@@ -22,7 +35,8 @@ public class EchoServerHandler implements ChannelInboundHandler {
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-
+        log.info("writeAndFlush;ctx={};firstMsg={};",ctx,firstMsg);
+        ctx.writeAndFlush(firstMsg);
     }
 
     @Override
@@ -32,14 +46,12 @@ public class EchoServerHandler implements ChannelInboundHandler {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        log.info("ctx={};msg={};", ctx, msg);
-        ctx.write(msg);
+
     }
 
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
-        log.info("ctx={};", ctx);
-        ctx.flush();
+
     }
 
     @Override
@@ -64,6 +76,6 @@ public class EchoServerHandler implements ChannelInboundHandler {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-        log.info("ctx={};cause={};", ctx, cause);
+
     }
 }

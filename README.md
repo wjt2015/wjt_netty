@@ -1,6 +1,8 @@
 # wjt_netty
 学习netty源码
 
+近期要参与多媒体项目,多媒体的网络传输也是基于TCP/UDP的网络包传输,底层也可应用netty;
+
 1,
 
 项目内要删除webapp目录,用WebApplicationInitializer的实现类启动web服务;
