@@ -21,11 +21,11 @@ public class EchoClientHandler implements ChannelInboundHandler {
     /**
      * 限制交互次数;
      */
-    private final AtomicInteger count=new AtomicInteger(3);
+    private final AtomicInteger count = new AtomicInteger(3);
 
     public EchoClientHandler() {
-        firstMsg= Unpooled.buffer(1024);
-        firstMsg.writeCharSequence("计算机软件技术",CharsetUtil.UTF_8);
+        firstMsg = Unpooled.buffer(1024);
+        firstMsg.writeCharSequence("计算机软件技术", CharsetUtil.UTF_8);
     }
 
     @Override
@@ -40,7 +40,7 @@ public class EchoClientHandler implements ChannelInboundHandler {
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        log.info("writeAndFlush;ctx={};firstMsg={};",ctx,firstMsg);
+        log.info("writeAndFlush;ctx={};firstMsg={};", ctx, firstMsg);
         ctx.writeAndFlush(firstMsg);
     }
 
@@ -51,15 +51,16 @@ public class EchoClientHandler implements ChannelInboundHandler {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        final ByteBuf byteBuf=(ByteBuf)msg;
-        log.info("ctx={};byteBuf={};",ctx,byteBuf.toString(CharsetUtil.UTF_8));
+        final ByteBuf byteBuf = (ByteBuf) msg;
+        log.info("ctx={};byteBuf={};", ctx, byteBuf.toString(CharsetUtil.UTF_8));
         ctx.write(msg);
     }
 
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
+        log.info("ctx={};read complete!", ctx);
         ctx.flush();
-        if(count.decrementAndGet()<=0){
+        if (count.decrementAndGet() <= 0) {
             ctx.close();
         }
     }
@@ -86,7 +87,7 @@ public class EchoClientHandler implements ChannelInboundHandler {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-        log.info("ctx={};cause={};",ctx,cause);
+        log.info("ctx={};cause={};", ctx, cause);
         ctx.close();
     }
 }
