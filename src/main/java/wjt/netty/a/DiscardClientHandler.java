@@ -33,7 +33,7 @@ public class DiscardClientHandler implements ChannelInboundHandler {
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         this.ctx = ctx;
         //init;
-        this.content = ctx.alloc().directBuffer(1024).writeZero(1024);
+        this.content = ctx.alloc().directBuffer(DiscardClient.SIZE).writeZero(DiscardClient.SIZE);
         log.info("ctx={};content={};", ctx, content);
         //send init msg;
         generateTraffic();
