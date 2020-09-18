@@ -18,6 +18,9 @@ public class EchoClientHandler implements ChannelInboundHandler {
 
     private final ByteBuf firstMsg;
 
+    /**
+     * 限制交互次数;
+     */
     private final AtomicInteger count=new AtomicInteger(3);
 
     public EchoClientHandler() {
