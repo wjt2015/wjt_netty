@@ -21,51 +21,50 @@ import java.io.InputStreamReader;
 @Service
 public class TelnetClient {
 
-    private final String host="127.0.0.1";
-    private final int port=10004;
+    private final String host = "127.0.0.1";
+    private final int port = 10004;
 
     @Resource
     private TelnetClientInitializer telnetClientInitializer;
 
-    public void run(){
-        EventLoopGroup group=new NioEventLoopGroup();
+    public void run() {
+        EventLoopGroup group = new NioEventLoopGroup();
         try {
-            Bootstrap b=new Bootstrap();
+            Bootstrap b = new Bootstrap();
             Channel ch = b.group(group)
                     .channel(NioSocketChannel.class)
                     .handler(telnetClientInitializer).connect(host, port).channel();
             //read cmds from the stdin;
-            ChannelFuture lastWriteFuture=null;
-            try(BufferedReader reader=new BufferedReader(new InputStreamReader(System.in))){
-
-                while (true){
-                    String line=reader.readLine();
-                    if(Strings.isNullOrEmpty(line)){
+            ChannelFuture lastWriteFuture = null;
+            try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
+                while (true) {
+                    String line = reader.readLine();
+                    if (Strings.isNullOrEmpty(line)) {
                         break;
                     }
 
                     final ByteBuf byteBuf = Unpooled.buffer(256);
-                    byteBuf.writeCharSequence(line+"\r\n", CharsetUtil.UTF_8);
-                    lastWriteFuture=ch.writeAndFlush(byteBuf);
-                    if (line.equalsIgnoreCase("bve")){
+                    byteBuf.writeCharSequence(line + "\r\n", CharsetUtil.UTF_8);
+                    lastWriteFuture = ch.writeAndFlush(byteBuf);
+                    if (line.equalsIgnoreCase("bve")) {
                         //wait until the server closes the connection;
                         ch.closeFuture().sync();
                         break;
                     }
                 }
 
-                if(lastWriteFuture!=null){
+                if (lastWriteFuture != null) {
                     //wait until all msgs are flushed before closing the channel;
                     lastWriteFuture.sync();
                 }
 
-            }catch (Exception e){
-                log.error("io error!",e);
+            } catch (Exception e) {
+                log.error("io error!", e);
             }
 
-        }catch (Exception e){
-            log.error("client error!",e);
-        }finally {
+        } catch (Exception e) {
+            log.error("client error!", e);
+        } finally {
             group.shutdownGracefully();
             log.info("client shutdown gracefully!");
         }
