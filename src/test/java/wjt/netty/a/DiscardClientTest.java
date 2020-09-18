@@ -11,6 +11,11 @@ import javax.annotation.Resource;
 
 import static org.junit.Assert.*;
 
+/**
+ mvn clean test -Dtest=wjt.netty.a.DiscardClientTest#run
+
+ mvn clean test -Dtest=wjt.netty.a.DiscardServerTest#run
+ */
 @Slf4j
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {NettyConfig.class})
