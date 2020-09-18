@@ -34,6 +34,7 @@ public class DiscardClientHandler implements ChannelInboundHandler {
         this.ctx = ctx;
         //init;
         this.content = ctx.alloc().directBuffer(DiscardClient.SIZE).writeZero(DiscardClient.SIZE);
+        this.content.writeCharSequence("netty_best_network_framework!", CharsetUtil.UTF_8);
         log.info("ctx={};content={};", ctx, content);
         //send init msg;
         generateTraffic();
@@ -83,9 +84,11 @@ public class DiscardClientHandler implements ChannelInboundHandler {
 
 
     private void generateTraffic() {
-        final String s = content.duplicate().retain().toString(CharsetUtil.UTF_8);
+        final ByteBuf byteBuf = content.duplicate().retain();
+        final String s = byteBuf.toString(CharsetUtil.UTF_8);
+        log.info("s={};", s);
         //flush the outbound buffer to the socket;once flushed,generate the same amount of traffic again;
-        ctx.writeAndFlush(s).addListener(trafficGenerator);
+        ctx.writeAndFlush(byteBuf).addListener(trafficGenerator);
         log.info("write and flush!s={};", s);
     }
 
