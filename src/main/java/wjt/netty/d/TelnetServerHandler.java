@@ -29,7 +29,7 @@ public class TelnetServerHandler implements ChannelInboundHandler {
         final ByteBuf byteBuf = ctx.alloc().directBuffer(1024);
         byteBuf.writeCharSequence("欢迎你,netty!", CharsetUtil.UTF_8);
         ctx.writeAndFlush(byteBuf);
-        log.info("writeAndFlush!ctx={};byteBuf={};",ctx,byteBuf);
+        log.info("writeAndFlush!ctx={};byteBuf={};", ctx, byteBuf);
     }
 
     @Override
@@ -39,6 +39,8 @@ public class TelnetServerHandler implements ChannelInboundHandler {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+        final ByteBuf byteBuf = (ByteBuf) msg;
+        log.info("ctx={};byteBuf={};", ctx, byteBuf.toString(CharsetUtil.UTF_8));
 
     }
 
@@ -70,7 +72,7 @@ public class TelnetServerHandler implements ChannelInboundHandler {
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
 
-        log.error("ctx={};cause={};",ctx,cause);
+        log.error("ctx={};cause={};", ctx, cause);
 
     }
 }
