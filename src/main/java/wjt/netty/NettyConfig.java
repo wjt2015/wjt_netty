@@ -2,10 +2,10 @@ package wjt.netty;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import wjt.netty.a.DiscardServer;
+import wjt.netty.b.EchoServer;
 
 @Configuration
-@ComponentScan(basePackageClasses = {DiscardServer.class})
+@ComponentScan(basePackageClasses = {EchoServer.class})
 public class NettyConfig {
 
 }

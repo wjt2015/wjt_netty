@@ -19,13 +19,11 @@ import javax.annotation.Resource;
 @Slf4j
 @Service
 public class EchoServer {
-
     @Resource
     private EchoServerHandler echoServerHandler;
 
     @Value("10002")
     private int port;
-
 
     public void run() {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
@@ -45,7 +43,7 @@ public class EchoServer {
                     });
             ChannelFuture f = b.bind(port).sync();
 
-            log.info("server bind successfully!f={};", f);
+            log.info("server bind successfully!port={};f={};", port, f);
             f.channel().closeFuture().sync();
 
             log.info("Wait until the server socket is closed!f={};", f);

@@ -5,6 +5,7 @@ import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandler;
+import io.netty.util.CharsetUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -46,12 +47,14 @@ public class EchoClientHandler implements ChannelInboundHandler {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-
+        final ByteBuf byteBuf=(ByteBuf)msg;
+        log.info("ctx={};byteBuf={};",ctx,byteBuf.toString(CharsetUtil.UTF_8));
+        ctx.write(msg);
     }
 
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
-
+        ctx.flush();
     }
 
     @Override
@@ -76,6 +79,7 @@ public class EchoClientHandler implements ChannelInboundHandler {
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
-
+        log.info("ctx={};cause={};",ctx,cause);
+        ctx.close();
     }
 }
