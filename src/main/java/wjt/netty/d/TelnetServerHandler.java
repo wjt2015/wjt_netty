@@ -41,6 +41,7 @@ public class TelnetServerHandler implements ChannelInboundHandler {
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         final ByteBuf byteBuf = (ByteBuf) msg;
         log.info("ctx={};byteBuf={};", ctx, byteBuf.toString(CharsetUtil.UTF_8));
+        byteBuf.release();
 
     }
 
