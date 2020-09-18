@@ -1,5 +1,6 @@
 package wjt.netty.c;
 
+import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandler;
@@ -32,8 +33,10 @@ public class TimeServerHandler implements ChannelInboundHandler {
     }
 
     private void sendMsg(final ChannelHandlerContext ctx, final String data, final ChannelFutureListener channelFutureListener) {
-        ctx.writeAndFlush(ctx.alloc().directBuffer(256)
-                .writeCharSequence(data, CharsetUtil.UTF_8))
+
+        final ByteBuf byteBuf = ctx.alloc().directBuffer(256);
+        byteBuf.writeCharSequence(data, CharsetUtil.UTF_8);
+        ctx.writeAndFlush(byteBuf)
                 .addListener(channelFutureListener);
     }
 
