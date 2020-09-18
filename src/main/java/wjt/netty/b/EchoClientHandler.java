@@ -18,10 +18,7 @@ public class EchoClientHandler implements ChannelInboundHandler {
 
     public EchoClientHandler() {
         firstMsg= Unpooled.buffer(1024);
-        for (int i=0;i<firstMsg.capacity();i++){
-            firstMsg.writeByte((byte)i);
-        }
-
+        firstMsg.writeCharSequence("计算机软件技术",CharsetUtil.UTF_8);
     }
 
     @Override
