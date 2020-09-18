@@ -18,7 +18,24 @@ mvn jetty:run -Pfrontend
 
 2,研究SSM的启动流程源码
 
+3,单元测试  
 
+mvn执行单元测试的控制台命令格式:  
+
+####执行一个测试类内的全部测试用例:
+mvn test -Dtest=<测试类的完整名字>
+
+####执行一个测试类内的指定的测试方法:
+mvn test -Dtest=<测试类的完整名字>#<测试方法>
+
+实例:   
+mvn clean test -Dtest=wjt.netty.a.DiscardClientTest#run 
+
+mvn clean test -Dtest=wjt.netty.a.DiscardServerTest#run 
+
+
+
+ 
 
 
 

@@ -12,12 +12,17 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+
 @Slf4j
 @Service
 public class DiscardServer {
 
     @Value("10001")
     private int port;
+
+    @Resource
+    private DiscardServerHandler discardServerHandler;
 
     public DiscardServer() {
         log.info("port={};", port);
@@ -38,7 +43,7 @@ public class DiscardServer {
                     .childHandler(new ChannelInitializer<SocketChannel>() {
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
-                            ch.pipeline().addLast(new DiscardServerHandler());
+                            ch.pipeline().addLast(discardServerHandler);
                         }
                     }).option(ChannelOption.SO_BACKLOG, 128)
                     .childOption(ChannelOption.SO_KEEPALIVE, true);

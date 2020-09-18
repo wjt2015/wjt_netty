@@ -1,13 +1,16 @@
 package wjt.netty.a;
 
 import io.netty.buffer.ByteBuf;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandler;
 import io.netty.util.CharsetUtil;
-import io.netty.util.ReferenceCountUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 
 @Slf4j
+@Service
+@ChannelHandler.Sharable
 public class DiscardServerHandler implements ChannelInboundHandler {
     @Override
     public void channelRegistered(ChannelHandlerContext channelHandlerContext) throws Exception {

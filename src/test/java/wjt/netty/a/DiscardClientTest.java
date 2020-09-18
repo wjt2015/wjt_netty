@@ -9,20 +9,19 @@ import wjt.netty.NettyConfig;
 
 import javax.annotation.Resource;
 
+import static org.junit.Assert.*;
 
 @Slf4j
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {NettyConfig.class})
-public class DiscardServerTest {
+public class DiscardClientTest {
 
     @Resource
-    private DiscardServer discardServer;
+    private DiscardClient discardClient;
 
     @Test
     public void run() {
-        discardServer.run();
-
-        log.info("the discard server is running!");
+        discardClient.run();
+        log.info("discardClient finish running!");
     }
-
 }
