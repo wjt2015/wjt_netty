@@ -18,7 +18,7 @@ public class EchoClientHandler implements ChannelInboundHandler {
 
     private final ByteBuf firstMsg;
 
-    private final AtomicInteger count=new AtomicInteger(10);
+    private final AtomicInteger count=new AtomicInteger(3);
 
     public EchoClientHandler() {
         firstMsg= Unpooled.buffer(1024);
