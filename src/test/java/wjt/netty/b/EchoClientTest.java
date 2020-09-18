@@ -9,6 +9,11 @@ import wjt.netty.NettyConfig;
 
 import javax.annotation.Resource;
 
+/**
+ mvn clean test -Dtest=wjt.netty.b.EchoClientTest#run
+
+ mvn clean test -Dtest=wjt.netty.b.EchoServerTest#run
+ */
 @Slf4j
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {NettyConfig.class})

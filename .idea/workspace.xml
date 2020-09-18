@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dde6145a-e728-4da1-b66d-581b4b61e0d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/b/EchoClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wjt/netty/NettyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/NettyConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wjt/netty/b/EchoClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/b/EchoClientHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wjt/netty/b/EchoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/b/EchoServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wjt/netty/b/EchoClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wjt/netty/b/EchoClientTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,8 +16,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/b/EchoServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+            <state relative-caret-position="564">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1233#1535#0" expanded="true" />
@@ -31,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/wjt/netty/b/EchoServerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+            <state relative-caret-position="176">
+              <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -94,12 +90,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/b/EchoClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="745">
-              <caret line="43" column="45" lean-forward="true" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
+            <state relative-caret-position="173">
+              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1224#1526#0" expanded="true" />
                 <element signature="e#1525#1526#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/wjt/netty/b/EchoClientTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -113,15 +121,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/channel/socket/nio/NioSocketChannel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -208,9 +207,10 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/wjt/netty/b/EchoClientHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/wjt/netty/b/EchoClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/wjt/netty/b/EchoServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/wjt/netty/NettyConfig.java" />
         <option value="$PROJECT_DIR$/src/test/java/wjt/netty/b/EchoServerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wjt/netty/b/EchoServer.java" />
+        <option value="$PROJECT_DIR$/src/test/java/wjt/netty/b/EchoClientTest.java" />
       </list>
     </option>
   </component>
@@ -402,7 +402,25 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="netty" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wjt_netty" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wjt_netty" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="netty" type="462c0819:PsiDirectoryNode" />
               <item name="a" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wjt_netty" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wjt_netty" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="netty" type="462c0819:PsiDirectoryNode" />
+              <item name="b" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wjt_netty" type="b2602c69:ProjectViewProjectNode" />
@@ -498,7 +516,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1600419391369" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1600419962680" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -585,7 +603,7 @@
       <updated>1600334605502</updated>
       <workItem from="1600334609783" duration="10051000" />
       <workItem from="1600396276117" duration="107000" />
-      <workItem from="1600396577929" duration="14927000" />
+      <workItem from="1600396577929" duration="15403000" />
     </task>
     <servers />
   </component>
@@ -622,10 +640,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25085000" />
+    <option name="totallyTimeSpent" value="25561000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1492" y="66" width="1552" height="990" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14039735" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -680,13 +699,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/util/ReferenceCounted.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1166">
-          <caret line="67" column="12" selection-start-line="67" selection-start-column="12" selection-end-line="67" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/util/ReferenceCountUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1028,18 +1040,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/b/EchoClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="745">
-          <caret line="43" column="45" lean-forward="true" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1224#1526#0" expanded="true" />
-            <element signature="e#1525#1526#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/b/EchoClientHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1804">
@@ -1072,8 +1072,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/b/EchoServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        <state relative-caret-position="564">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1233#1535#0" expanded="true" />
@@ -1082,10 +1082,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/b/EchoClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1224#1526#0" expanded="true" />
+            <element signature="e#1525#1526#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/wjt/netty/b/EchoServerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        <state relative-caret-position="176">
+          <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/wjt/netty/b/EchoClientTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
