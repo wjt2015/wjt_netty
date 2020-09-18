@@ -35,14 +35,19 @@ public class EchoServerHandler implements ChannelInboundHandler {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         final ByteBuf byteBuf = (ByteBuf) msg;
-        log.info("ctx={};msg={};", ctx, byteBuf.toString(CharsetUtil.UTF_8));
-        ctx.write(msg);
+        log.info("active={};ctx={};msg={};", ctx.channel().isActive(), ctx, byteBuf.toString(CharsetUtil.UTF_8));
+        if (ctx.channel().isActive()) {
+            ctx.write(msg);
+
+        }
     }
 
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
-        log.info("ctx={};", ctx);
-        ctx.flush();
+        log.info("active={};ctx={};", ctx.channel().isActive(), ctx);
+        if (ctx.channel().isActive()) {
+            ctx.flush();
+        }
     }
 
     @Override
