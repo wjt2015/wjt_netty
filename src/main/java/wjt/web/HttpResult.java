@@ -1,5 +1,8 @@
 package wjt.web;
 
+import lombok.ToString;
+
+@ToString
 public class HttpResult {
     private final int errCode;
     private final String errMsg;

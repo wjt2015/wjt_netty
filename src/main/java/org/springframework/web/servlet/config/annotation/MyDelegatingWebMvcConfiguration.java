@@ -51,6 +51,7 @@ public class MyDelegatingWebMvcConfiguration extends MyWebMvcConfigurationSuppor
         if (!CollectionUtils.isEmpty(configurers)) {
             this.configurers.addWebMvcConfigurers(configurers);
         }
+        log.info("configurers={};this.configurers={};", configurers, this.configurers);
     }
 
 
