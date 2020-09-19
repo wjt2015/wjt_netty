@@ -35,7 +35,8 @@ public class TelnetServerHandler implements ChannelInboundHandler {
 
     @Override
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
-
+        ctx.close();
+        log.info("断开连接!ctx={};", ctx);
     }
 
     @Override
