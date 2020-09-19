@@ -24,12 +24,12 @@ public class TelnetClientHandler implements ChannelInboundHandler {
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-
+        log.info("连接建立!ctx={};", ctx);
     }
 
     @Override
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
-
+        log.info("连接断开!ctx={};", ctx);
     }
 
     @Override

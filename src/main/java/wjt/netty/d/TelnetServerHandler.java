@@ -26,6 +26,7 @@ public class TelnetServerHandler implements ChannelInboundHandler {
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
+
         final ByteBuf byteBuf = ctx.alloc().directBuffer(1024);
         byteBuf.writeCharSequence("欢迎你,netty!", CharsetUtil.UTF_8);
         log.info("before_writeAndFlush!ctx={};byteBuf={};", ctx, byteBuf);
