@@ -1,8 +1,10 @@
 package wjt.netty.d;
 
+import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandler;
+import io.netty.util.CharsetUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -32,7 +34,8 @@ public class TelnetClientHandler implements ChannelInboundHandler {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-
+        final ByteBuf byteBuf = (ByteBuf) msg;
+        log.info("ctx={};byteBuf={};", ctx, byteBuf.toString(CharsetUtil.UTF_8));
     }
 
     @Override
