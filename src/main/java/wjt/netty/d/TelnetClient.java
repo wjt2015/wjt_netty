@@ -60,6 +60,8 @@ public class TelnetClient {
             }
             log.info("write and flush complete!");
 
+            Thread.sleep(1000);
+
         } catch (Exception e) {
             log.error("client error!", e);
         } finally {

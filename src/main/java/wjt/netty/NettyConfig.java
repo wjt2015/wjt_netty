@@ -23,9 +23,5 @@ public class NettyConfig {
         return new StringDecoder();
     }
 
-    @Bean
-    public DelimiterBasedFrameDecoder delimiterBasedFrameDecoder() {
-        return new DelimiterBasedFrameDecoder(8192, Delimiters.lineDelimiter());
-    }
 
 }

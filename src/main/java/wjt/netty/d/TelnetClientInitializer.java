@@ -24,13 +24,12 @@ public class TelnetClientInitializer extends ChannelInitializer<SocketChannel> {
     @Resource
     private TelnetClientHandler telnetClientHandler;
 
-    @Resource
-    private DelimiterBasedFrameDecoder delimiterBasedFrameDecoder;
+
 
 
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {
-        ch.pipeline().addLast(delimiterBasedFrameDecoder)
+        ch.pipeline().addLast(new DelimiterBasedFrameDecoder(8192, Delimiters.lineDelimiter()))
                 .addLast(stringDecoder)
                 .addLast(stringEncoder)
                 .addLast(telnetClientHandler);
