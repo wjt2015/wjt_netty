@@ -37,10 +37,10 @@ public class TelnetClient {
         EventLoopGroup group = new NioEventLoopGroup();
         try {
             Bootstrap b = new Bootstrap();
-            Channel ch = b.group(group)
-                    .channel(NioSocketChannel.class)
-                    .handler(telnetClientInitializer).connect(host, port).channel();
-
+            b.group(group)
+                    .channel(NioSocketChannel.class).handler(telnetClientInitializer);
+            //start the connection attempt;
+            Channel ch = b.connect(host, port).sync().channel();
             ChannelFuture lastWriteFuture = null;
 
             for (String line : lines) {
@@ -58,7 +58,6 @@ public class TelnetClient {
                 //wait until all msgs are flushed before closing the channel;
                 lastWriteFuture.sync();
             }
-
 
         } catch (Exception e) {
             log.error("client error!", e);
