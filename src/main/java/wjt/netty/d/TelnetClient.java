@@ -46,11 +46,6 @@ public class TelnetClient {
             final ByteBuf byteBuf = Unpooled.buffer(256);
             for (String line : lines) {
                 byteBuf.writeCharSequence(line + "\r\n", CharsetUtil.UTF_8);
-                if (line.equalsIgnoreCase("bve")) {
-                    //wait until the server closes the connection;
-                    ch.closeFuture().sync();
-                    break;
-                }
             }
 
             lastWriteFuture = ch.writeAndFlush(byteBuf);
