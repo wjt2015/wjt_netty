@@ -43,16 +43,17 @@ public class TelnetClient {
             Channel ch = b.connect(host, port).sync().channel();
             ChannelFuture lastWriteFuture = null;
 
+            final ByteBuf byteBuf = Unpooled.buffer(256);
             for (String line : lines) {
-                final ByteBuf byteBuf = Unpooled.buffer(256);
                 byteBuf.writeCharSequence(line + "\r\n", CharsetUtil.UTF_8);
-                lastWriteFuture = ch.writeAndFlush(byteBuf);
                 if (line.equalsIgnoreCase("bve")) {
                     //wait until the server closes the connection;
                     ch.closeFuture().sync();
                     break;
                 }
             }
+
+            lastWriteFuture = ch.writeAndFlush(byteBuf);
 
             if (lastWriteFuture != null) {
                 //wait until all msgs are flushed before closing the channel;
