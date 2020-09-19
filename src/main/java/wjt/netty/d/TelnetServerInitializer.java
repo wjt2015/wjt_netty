@@ -22,7 +22,6 @@ public class TelnetServerInitializer extends ChannelInitializer<SocketChannel> {
     private StringDecoder stringDecoder;
     @Resource
     private TelnetServerHandler telnetServerHandler;
-    @Resource
 
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {
