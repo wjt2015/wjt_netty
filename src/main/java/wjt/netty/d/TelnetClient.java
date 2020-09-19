@@ -58,6 +58,7 @@ public class TelnetClient {
                 //wait until all msgs are flushed before closing the channel;
                 lastWriteFuture.sync();
             }
+            log.info("write and flush complete!");
 
         } catch (Exception e) {
             log.error("client error!", e);

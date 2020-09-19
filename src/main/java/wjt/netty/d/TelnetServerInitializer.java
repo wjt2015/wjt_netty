@@ -4,7 +4,6 @@ import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.handler.codec.DelimiterBasedFrameDecoder;
-import io.netty.handler.codec.Delimiters;
 import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
 import lombok.extern.slf4j.Slf4j;
@@ -16,21 +15,23 @@ import javax.annotation.Resource;
 @Service
 public class TelnetServerInitializer extends ChannelInitializer<SocketChannel> {
 
-    private static final StringDecoder STRING_DECODER=new StringDecoder();
-    private static final StringEncoder STRING_ENCODER=new StringEncoder();
-
+    @Resource
+    private StringEncoder stringEncoder;
+    @Resource
+    private StringDecoder stringDecoder;
     @Resource
     private TelnetServerHandler telnetServerHandler;
-
+    @Resource
+    private DelimiterBasedFrameDecoder delimiterBasedFrameDecoder;
 
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {
 
         ChannelPipeline pipeline = ch.pipeline();
-        pipeline.addLast(new DelimiterBasedFrameDecoder(8192, Delimiters.lineDelimiter()))
-        .addLast(STRING_DECODER).addLast(STRING_ENCODER).addLast(telnetServerHandler);
+        pipeline.addLast(delimiterBasedFrameDecoder)
+                .addLast(stringDecoder).addLast(stringEncoder).addLast(telnetServerHandler);
 
-        log.info("pipeline={};",pipeline);
+        log.info("pipeline={};", pipeline);
 
     }
 }

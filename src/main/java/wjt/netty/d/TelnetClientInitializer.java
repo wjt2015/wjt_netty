@@ -1,7 +1,6 @@
 package wjt.netty.d;
 
 import io.netty.channel.ChannelInitializer;
-import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.handler.codec.DelimiterBasedFrameDecoder;
 import io.netty.handler.codec.Delimiters;
@@ -16,18 +15,24 @@ import javax.annotation.Resource;
 @Service
 public class TelnetClientInitializer extends ChannelInitializer<SocketChannel> {
 
-    private static final StringDecoder DECODER = new StringDecoder();
-    private static final StringEncoder ENCODER = new StringEncoder();
+    @Resource
+    private StringEncoder stringEncoder;
+
+    @Resource
+    private StringDecoder stringDecoder;
 
     @Resource
     private TelnetClientHandler telnetClientHandler;
 
+    @Resource
+    private DelimiterBasedFrameDecoder delimiterBasedFrameDecoder;
+
 
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {
-        ch.pipeline().addLast(new DelimiterBasedFrameDecoder(8192, Delimiters.lineDelimiter()))
-                .addLast(DECODER)
-                .addLast(ENCODER)
+        ch.pipeline().addLast(delimiterBasedFrameDecoder)
+                .addLast(stringDecoder)
+                .addLast(stringEncoder)
                 .addLast(telnetClientHandler);
         log.info("pipeline={};", ch.pipeline());
     }
