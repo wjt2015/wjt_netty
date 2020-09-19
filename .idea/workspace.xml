@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dde6145a-e728-4da1-b66d-581b4b61e0d3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetClientHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetServerHandler.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -18,10 +16,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetServerHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="567">
+              <caret line="61" column="21" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/channel/AbstractChannelHandlerContext.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="830" column="25" selection-start-line="830" selection-start-column="25" selection-end-line="830" selection-end-column="25" />
+              <folding>
+                <element signature="e#26510#26511#0" expanded="true" />
+                <element signature="e#26565#26566#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -400,7 +411,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1600518375835" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1600518823509" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -493,7 +504,7 @@
       <workItem from="1600334609783" duration="10051000" />
       <workItem from="1600396276117" duration="107000" />
       <workItem from="1600396577929" duration="27266000" />
-      <workItem from="1600500121185" duration="6307000" />
+      <workItem from="1600500121185" duration="6551000" />
     </task>
     <servers />
   </component>
@@ -530,7 +541,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43731000" />
+    <option name="totallyTimeSpent" value="43975000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1452" y="23" width="1738" height="1006" extended-state="0" />
@@ -603,17 +614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="618">
           <caret line="312" column="18" selection-start-line="312" selection-start-column="18" selection-end-line="312" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/channel/AbstractChannelHandlerContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="830" column="20" selection-start-line="830" selection-start-column="20" selection-end-line="830" selection-end-column="20" />
-          <folding>
-            <element signature="e#26510#26511#0" expanded="true" />
-            <element signature="e#26565#26566#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1006,10 +1006,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/channel/AbstractChannelHandlerContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="830" column="25" selection-start-line="830" selection-start-column="25" selection-end-line="830" selection-end-column="25" />
+          <folding>
+            <element signature="e#26510#26511#0" expanded="true" />
+            <element signature="e#26565#26566#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetServerHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="567">
+          <caret line="61" column="21" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

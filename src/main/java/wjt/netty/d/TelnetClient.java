@@ -50,14 +50,14 @@ public class TelnetClient {
 
             lastWriteFuture = ch.writeAndFlush(byteBuf);
 
-            Thread.sleep(5000);
+
 
             if (lastWriteFuture != null) {
                 //wait until all msgs are flushed before closing the channel;
                 lastWriteFuture.sync();
             }
             log.info("write and flush complete!");
-
+            Thread.sleep(5000);
 
         } catch (Exception e) {
             log.error("client error!", e);
