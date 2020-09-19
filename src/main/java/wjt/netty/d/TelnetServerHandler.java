@@ -40,9 +40,13 @@ public class TelnetServerHandler implements ChannelInboundHandler {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        final ByteBuf byteBuf = (ByteBuf) msg;
-        log.info("ctx={};byteBuf={};", ctx, byteBuf.toString(CharsetUtil.UTF_8));
-        byteBuf.release();
+        if (msg instanceof ByteBuf) {
+            final ByteBuf byteBuf = (ByteBuf) msg;
+            log.info("ctx={};byteBuf={};", ctx, byteBuf.toString(CharsetUtil.UTF_8));
+            byteBuf.release();
+        } else {
+            log.info("ctx={};msg={};", ctx, msg);
+        }
 
     }
 
