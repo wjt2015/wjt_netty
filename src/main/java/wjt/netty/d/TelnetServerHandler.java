@@ -27,17 +27,21 @@ public class TelnetServerHandler implements ChannelInboundHandler {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
 
-        final ByteBuf byteBuf = ctx.alloc().directBuffer(1024);
-        byteBuf.writeCharSequence("欢迎你,netty!", CharsetUtil.UTF_8);
-        log.info("before_writeAndFlush!ctx={};byteBuf={};", ctx, byteBuf);
-        ctx.writeAndFlush(byteBuf);
-        log.info("after_writeAndFlush!ctx={};byteBuf={};", ctx, byteBuf);
+        log.info("连接建立!ctx={};", ctx);
     }
 
     @Override
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
         ctx.close();
         log.info("断开连接!ctx={};", ctx);
+    }
+
+    private void sendMsg(ChannelHandlerContext ctx){
+        final ByteBuf byteBuf = ctx.alloc().directBuffer(1024);
+        byteBuf.writeCharSequence("欢迎你,netty!", CharsetUtil.UTF_8);
+        log.info("before_writeAndFlush!ctx={};byteBuf={};", ctx, byteBuf);
+        ctx.writeAndFlush(byteBuf);
+        log.info("after_writeAndFlush!ctx={};byteBuf={};", ctx, byteBuf);
     }
 
     @Override
@@ -49,6 +53,8 @@ public class TelnetServerHandler implements ChannelInboundHandler {
         } else {
             log.info("ctx={};msg={};", ctx, msg);
         }
+
+        sendMsg(ctx);
 
     }
 
