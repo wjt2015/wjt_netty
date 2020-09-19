@@ -53,14 +53,13 @@ public class TelnetServerHandler implements ChannelInboundHandler {
         } else {
             log.info("ctx={};msg={};", ctx, msg);
         }
-
-        sendMsg(ctx);
-
     }
 
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
+        log.info("read_complete;ctx={};",ctx);
 
+        sendMsg(ctx);
     }
 
     @Override
