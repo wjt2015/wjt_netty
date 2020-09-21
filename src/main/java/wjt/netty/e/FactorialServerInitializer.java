@@ -8,9 +8,15 @@ import io.netty.handler.codec.compression.ZlibWrapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+
 @Slf4j
 @Service
 public class FactorialServerInitializer extends ChannelInitializer<SocketChannel> {
+
+    @Resource
+    private NumEncoder numEncoder;
+
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {
 
@@ -21,7 +27,7 @@ public class FactorialServerInitializer extends ChannelInitializer<SocketChannel
         pipeline.addLast(ZlibCodecFactory.newZlibDecoder(ZlibWrapper.GZIP));
         //num codec;
         pipeline.addLast(new BigIntegerDecoder());
-        pipeline.addLast(new NumEncoder());
+        pipeline.addLast(this.numEncoder);
         //business logic;
         pipeline.addLast(new FactorialServerHandler());
 

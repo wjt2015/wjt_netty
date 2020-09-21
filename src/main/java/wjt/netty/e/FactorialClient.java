@@ -14,17 +14,12 @@ import javax.annotation.Resource;
 @Slf4j
 @Service
 public class FactorialClient {
-
-
-
     @Resource
     private FactorialClientInitializer factorialClientInitializer;
 
     public void run(){
         EventLoopGroup group=new NioEventLoopGroup();
-
         try {
-
             Bootstrap b=new Bootstrap();
             ChannelFuture f = b.group(group)
                     .channel(NioSocketChannel.class)
