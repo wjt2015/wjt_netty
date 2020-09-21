@@ -30,7 +30,7 @@ public class FactorialClientInitializer extends ChannelInitializer<SocketChannel
         pipeline.addLast(numEncoder);
 
         //business logic;
-        pipeline.addLast(new FactorialServerHandler());
+        pipeline.addLast(new FactorialClientHandler());
 
         log.info("pipeline={};",pipeline);
     }
