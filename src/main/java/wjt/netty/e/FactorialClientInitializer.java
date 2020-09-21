@@ -20,6 +20,9 @@ public class FactorialClientInitializer extends ChannelInitializer<SocketChannel
     @Resource
     private NumEncoder numEncoder;
 
+    @Resource
+    private BigIntegerDecoder bigIntegerDecoder;
+
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {
         ChannelPipeline pipeline = ch.pipeline();
@@ -28,7 +31,7 @@ public class FactorialClientInitializer extends ChannelInitializer<SocketChannel
         pipeline.addLast(ZlibCodecFactory.newZlibDecoder(ZlibWrapper.GZIP));
 
         //num codec;
-        pipeline.addLast(new BigIntegerDecoder());
+        pipeline.addLast(this.bigIntegerDecoder);
         pipeline.addLast(numEncoder);
 
         //business logic;
