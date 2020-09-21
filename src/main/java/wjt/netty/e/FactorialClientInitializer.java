@@ -15,9 +15,6 @@ import javax.annotation.Resource;
 public class FactorialClientInitializer extends ChannelInitializer<SocketChannel> {
 
     @Resource
-    private FactorialClientHandler factorialClientHandler;
-
-    @Resource
     private NumEncoder numEncoder;
 
 
@@ -33,7 +30,7 @@ public class FactorialClientInitializer extends ChannelInitializer<SocketChannel
         pipeline.addLast(numEncoder);
 
         //business logic;
-        pipeline.addLast(factorialClientHandler);
+        pipeline.addLast(new FactorialServerHandler());
 
         log.info("pipeline={};",pipeline);
     }
