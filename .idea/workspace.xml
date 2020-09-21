@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dde6145a-e728-4da1-b66d-581b4b61e0d3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialClientInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialServerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialServerInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/e/NumEncoder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wjt/netty/e/BigIntegerDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/e/BigIntegerDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/wjt/netty/d/TelnetServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/wjt/netty/d/TelnetServerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,11 +21,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialClientHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-49">
+              <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialClientInitializer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="472">
+              <caret line="33" column="53" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialServerHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#868#869#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetServerHandler.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialServerInitializer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="53" column="49" lean-forward="true" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
+            <state relative-caret-position="464">
+              <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -27,35 +83,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/channel/AbstractChannelHandlerContext.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/channel/SimpleChannelInboundHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="830" column="25" selection-start-line="830" selection-start-column="25" selection-end-line="830" selection-end-column="25" />
-              <folding>
-                <element signature="e#26510#26511#0" expanded="true" />
-                <element signature="e#26565#26566#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-637">
+              <caret line="47" column="69" lean-forward="true" selection-start-line="47" selection-start-column="69" selection-end-line="47" selection-end-column="69" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetClient.java">
+        <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/channel/ChannelInboundHandlerAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="45" column="57" lean-forward="true" selection-start-line="45" selection-start-column="57" selection-end-line="45" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="220">
+              <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetClientHandler.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/e/NumEncoder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="444">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,43 +113,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/channel/ChannelHandlerContext.java">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/src.zip!/java/math/BigInteger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="124" column="72" lean-forward="true" selection-start-line="124" selection-start-column="72" selection-end-line="124" selection-end-column="72" />
+            <state relative-caret-position="478">
+              <caret line="3975" column="18" selection-start-line="3975" selection-start-column="18" selection-end-line="3975" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetClientInitializer.java">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/src.zip!/java/lang/Number.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetServerInitializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/handler/codec/ByteToMessageDecoder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="69" column="22" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
+            <state relative-caret-position="228">
+              <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -110,8 +135,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -155,13 +180,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/MyDispatcherServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/springframework/context/support/MyApplicationObjectSupport.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/springframework/web/context/support/MyWebApplicationObjectSupport.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/support/MyWebContentGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/mvc/method/MyAbstractHandlerMethodAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/config/annotation/MyWebMvcConfigurationSupport.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/mvc/method/annotation/MyAbstractMessageConverterMethodArgumentResolver.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/mvc/method/annotation/MyAbstractMessageConverterMethodProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/mvc/method/annotation/MyRequestResponseBodyMethodProcessor.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/springframework/web/servlet/mvc/method/annotation/MyRequestMappingHandlerAdapter.java" />
@@ -197,7 +215,6 @@
         <option value="$PROJECT_DIR$/src/main/java/wjt/netty/c/MyByteToMessageDecoder.java" />
         <option value="$PROJECT_DIR$/src/main/java/wjt/netty/d/TimeServerHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetServer.java" />
-        <option value="$PROJECT_DIR$/src/test/java/wjt/netty/d/TelnetServerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/wjt/netty/d/TelnetClientTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/wjt/netty/NettyConfig.java" />
@@ -206,6 +223,14 @@
         <option value="$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetClientHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetServerHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wjt/netty/e/BigIntegerDecoder.java" />
+        <option value="$PROJECT_DIR$/src/test/java/wjt/netty/d/TelnetServerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialClientHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wjt/netty/e/NumEncoder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialClientInitializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialServerHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialServerInitializer.java" />
       </list>
     </option>
   </component>
@@ -228,10 +253,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1452" />
-    <option name="y" value="23" />
-    <option name="width" value="1738" />
-    <option name="height" value="1006" />
+    <option name="x" value="1470" />
+    <option name="y" value="29" />
+    <option name="width" value="1747" />
+    <option name="height" value="992" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -350,6 +375,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="wjt" type="462c0819:PsiDirectoryNode" />
+              <item name="netty" type="462c0819:PsiDirectoryNode" />
+              <item name="e" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wjt_netty" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wjt_netty" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wjt" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -400,6 +435,15 @@
             </path>
             <path>
               <item name="wjt_netty" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wjt_netty" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="netty" type="462c0819:PsiDirectoryNode" />
+              <item name="d" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wjt_netty" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -412,7 +456,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1600519124386" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1600674340573" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -452,7 +496,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DiscardClientTest.run">
+  <component name="RunManager" selected="JUnit.TelnetServerTest.bigInt">
     <configuration name="DiscardClientTest.run" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wjt_netty" />
       <extension name="coverage">
@@ -485,8 +529,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TelnetServerTest.bigInt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wjt_netty" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="wjt.netty.d.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="wjt.netty.d" />
+      <option name="MAIN_CLASS_NAME" value="wjt.netty.d.TelnetServerTest" />
+      <option name="METHOD_NAME" value="bigInt" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TelnetServerTest.bigInt" />
         <item itemvalue="JUnit.DiscardClientTest.run" />
         <item itemvalue="JUnit.DiscardServerTest.run" />
       </list>
@@ -505,50 +566,54 @@
       <workItem from="1600334609783" duration="10051000" />
       <workItem from="1600396276117" duration="107000" />
       <workItem from="1600396577929" duration="27266000" />
-      <workItem from="1600500121185" duration="6800000" />
+      <workItem from="1600500121185" duration="7369000" />
+      <workItem from="1600592176788" duration="444000" />
+      <workItem from="1600611266944" duration="566000" />
+      <workItem from="1600623373633" duration="477000" />
+      <workItem from="1600656080911" duration="9329000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DiscardServerTest_run - 2020.09.18 at 14h 52m 20s.xml">
-      <configuration name="DiscardServerTest.run" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DiscardServerTest_run - 2020.09.18 at 14h 52m 24s.xml">
-      <configuration name="DiscardServerTest.run" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DiscardServerTest_run - 2020.09.18 at 14h 52m 33s.xml">
-      <configuration name="DiscardServerTest.run" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DiscardServerTest_run - 2020.09.18 at 14h 52m 56s.xml">
-      <configuration name="DiscardServerTest.run" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DiscardServerTest_run - 2020.09.18 at 14h 53m 01s.xml">
-      <configuration name="DiscardServerTest.run" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DiscardServerTest_run - 2020.09.18 at 14h 53m 08s.xml">
-      <configuration name="DiscardServerTest.run" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DiscardServerTest_run - 2020.09.18 at 14h 53m 13s.xml">
-      <configuration name="DiscardServerTest.run" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DiscardServerTest_run - 2020.09.18 at 14h 55m 27s.xml">
-      <configuration name="DiscardServerTest.run" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DiscardClientTest_run - 2020.09.18 at 15h 28m 42s.xml">
       <configuration name="DiscardClientTest.run" configurationId="JUnit" />
     </history-entry>
     <history-entry file="DiscardServerTest_run - 2020.09.18 at 15h 30m 23s.xml">
       <configuration name="DiscardServerTest.run" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TelnetServerTest_bigInt - 2020.09.21 at 11h 54m 31s.xml">
+      <configuration name="TelnetServerTest.bigInt" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TelnetServerTest_bigInt - 2020.09.21 at 12h 03m 27s.xml">
+      <configuration name="TelnetServerTest.bigInt" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TelnetServerTest_bigInt - 2020.09.21 at 12h 11m 12s.xml">
+      <configuration name="TelnetServerTest.bigInt" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TelnetServerTest_bigInt - 2020.09.21 at 12h 12m 34s.xml">
+      <configuration name="TelnetServerTest.bigInt" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TelnetServerTest_bigInt - 2020.09.21 at 12h 13m 56s.xml">
+      <configuration name="TelnetServerTest.bigInt" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TelnetServerTest_bigInt - 2020.09.21 at 12h 16m 19s.xml">
+      <configuration name="TelnetServerTest.bigInt" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TelnetServerTest_bigInt - 2020.09.21 at 12h 16m 40s.xml">
+      <configuration name="TelnetServerTest.bigInt" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TelnetServerTest_bigInt - 2020.09.21 at 12h 24m 05s.xml">
+      <configuration name="TelnetServerTest.bigInt" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44224000" />
+    <option name="totallyTimeSpent" value="55609000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1452" y="23" width="1738" height="1006" extended-state="0" />
+    <frame x="1470" y="29" width="1747" height="992" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12676887" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13313784" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -557,20 +622,20 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.23719376" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31848553" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.23666666" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31777778" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.20678337" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.21" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32872927" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32872927" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.32850778" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32777777" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -601,127 +666,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/joda-time/joda-time/2.10.3/joda-time-2.10.3.jar!/org/joda/time/base/AbstractDateTime.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="119" column="18" selection-start-line="119" selection-start-column="18" selection-end-line="119" selection-end-column="18" />
-          <folding>
-            <element signature="e#3435#3436#0" expanded="true" />
-            <element signature="e#3474#3475#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/joda-time/joda-time/2.10.3/joda-time-2.10.3-sources.jar!/org/joda/time/base/AbstractDateTime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
-          <caret line="312" column="18" selection-start-line="312" selection-start-column="18" selection-end-line="312" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/channel/ChannelFutureListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/util/ReferenceCounted.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="67" column="12" selection-start-line="67" selection-start-column="12" selection-end-line="67" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/bootstrap/AbstractBootstrap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="169" column="17" selection-start-line="169" selection-start-column="17" selection-end-line="169" selection-end-column="17" />
-          <folding>
-            <element signature="e#2273#2299#0" expanded="true" />
-            <element signature="e#15409#15410#0" expanded="true" />
-            <element signature="e#15439#15440#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/c/TimeClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/wjt/netty/c/TimeServerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/c/TimeServerHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="36" column="62" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/c/TimeServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1117#1419#0" expanded="true" />
-            <element signature="e#1418#1419#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/wjt/netty/c/TimeClientTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/c/TimeClientHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="639">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/handler/codec/ByteToMessageCodec.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="28" column="95" selection-start-line="28" selection-start-column="95" selection-end-line="28" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/util/internal/TypeParameterMatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="149" column="28" selection-start-line="149" selection-start-column="28" selection-end-line="149" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/c/MyData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/c/MyMessageToByteEncoderImpl.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/handler/codec/MessageToByteEncoder.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -743,13 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/channel/ChannelInboundHandlerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/c/MyByteToMessageDecoder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -767,13 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/buffer/ByteBuf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="2405" column="27" selection-start-line="2405" selection-start-column="27" selection-end-line="2405" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetServer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -781,13 +711,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/wjt/netty/d/TelnetServerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="15" selection-start-line="15" selection-end-line="15" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -805,24 +728,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/channel/ChannelOutboundInvoker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="229" column="18" selection-start-line="229" selection-start-column="18" selection-end-line="229" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/channel/ChannelFuture.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
           <caret line="164" column="43" selection-start-line="164" selection-start-column="43" selection-end-line="164" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/util/concurrent/Future.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="86" column="19" selection-start-line="86" selection-start-column="14" selection-end-line="86" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -897,17 +806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/handler/codec/string/StringDecoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="62" column="11" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
-          <folding>
-            <element signature="e#2346#2347#0" expanded="true" />
-            <element signature="e#2392#2393#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/wjt/netty/d/TelnetClientTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -943,64 +841,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/handler/codec/ByteToMessageDecoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="69" column="22" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/handler/codec/DelimiterBasedFrameDecoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="127" column="11" selection-start-line="127" selection-start-column="11" selection-end-line="127" selection-end-column="11" />
-          <folding>
-            <element signature="e#2806#2807#0" expanded="true" />
-            <element signature="e#2859#2860#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetServerInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetClientInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/channel/ChannelHandlerContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="124" column="72" lean-forward="true" selection-start-line="124" selection-start-column="72" selection-end-line="124" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetClientHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/channel/AbstractChannelHandlerContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="16434">
           <caret line="830" column="25" selection-start-line="830" selection-start-column="25" selection-end-line="830" selection-end-column="25" />
           <folding>
             <element signature="e#26510#26511#0" expanded="true" />
@@ -1011,18 +854,243 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="45" column="57" lean-forward="true" selection-start-line="45" selection-start-column="57" selection-end-line="45" selection-end-column="57" />
+        <state relative-caret-position="616">
+          <caret line="45" column="57" selection-start-line="45" selection-start-column="57" selection-end-line="45" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetClientHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/channel/ChannelHandlerContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2266">
+          <caret line="124" column="72" selection-start-line="124" selection-start-column="72" selection-end-line="124" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetClientInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/handler/codec/ByteToMessageDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1012">
+          <caret line="69" column="22" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetServerHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="53" column="49" lean-forward="true" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
+        <state relative-caret-position="758">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/handler/codec/DelimiterBasedFrameDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="127" column="11" selection-start-line="127" selection-start-column="11" selection-end-line="127" selection-end-column="11" />
+          <folding>
+            <element signature="e#2806#2807#0" expanded="true" />
+            <element signature="e#2859#2860#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/handler/codec/string/StringDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+          <folding>
+            <element signature="e#2346#2347#0" expanded="true" />
+            <element signature="e#2392#2393#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/d/TelnetServerInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="21" column="21" lean-forward="true" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/buffer/Unpooled.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1521">
+          <caret line="114" column="26" selection-start-line="114" selection-start-column="26" selection-end-line="114" selection-end-column="26" />
+          <folding>
+            <element signature="e#4079#4080#0" expanded="true" />
+            <element signature="e#4135#4136#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/buffer/ByteBuf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="466" column="28" selection-start-line="466" selection-start-column="28" selection-end-line="466" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/wjt/netty/d/TelnetServerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="56" column="32" lean-forward="true" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/e/BigIntegerDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/src.zip!/java/util/concurrent/BlockingQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="261" column="6" selection-start-line="261" selection-start-column="6" selection-end-line="261" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="891">
+          <caret line="913" column="16" selection-start-line="913" selection-start-column="16" selection-end-line="913" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="828" column="26" selection-start-line="828" selection-start-column="26" selection-end-line="828" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/util/concurrent/Future.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="46" column="14" selection-start-line="46" selection-start-column="14" selection-end-line="46" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/channel/ChannelOutboundInvoker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="86" column="18" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/src.zip!/java/lang/Number.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_231.jdk/Contents/Home/src.zip!/java/math/BigInteger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="3975" column="18" selection-start-line="3975" selection-start-column="18" selection-end-line="3975" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/e/NumEncoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialClientHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-49">
+          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialClientInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="33" column="53" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/channel/ChannelInboundHandlerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/channel/SimpleChannelInboundHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-637">
+          <caret line="47" column="69" lean-forward="true" selection-start-line="47" selection-start-column="69" selection-end-line="47" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialServerHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialServerInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
