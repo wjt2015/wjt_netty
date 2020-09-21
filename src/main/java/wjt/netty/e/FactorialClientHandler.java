@@ -49,6 +49,7 @@ public class FactorialClientHandler extends SimpleChannelInboundHandler<BigInteg
     @Override
     public void channelActive(ChannelHandlerContext ctx) {
         this.ctx = ctx;
+        log.info("ctx={};", ctx);
         sendNums();
     }
 
@@ -75,7 +76,15 @@ public class FactorialClientHandler extends SimpleChannelInboundHandler<BigInteg
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, BigInteger msg) throws Exception {
+        recvMsgCount++;
+        if (recvMsgCount == SUM_COUNT) {
+            ctx.channel().closeFuture().addListener(f -> {
+                boolean offer = answers.offer(msg);
 
+                log.info("ctx={};msg={};offer={};", ctx, msg, offer);
+
+            });
+        }
     }
 
     static class MyChannelFutureListener implements ChannelFutureListener {

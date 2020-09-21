@@ -102,8 +102,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/handler/codec/ByteToMessageDecoder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="427" column="31" selection-start-line="427" selection-start-column="31" selection-end-line="427" selection-end-column="31" />
+            <state relative-caret-position="627">
+              <caret line="440" column="20" lean-forward="true" selection-start-line="440" selection-start-column="20" selection-end-line="440" selection-end-column="20" />
               <folding>
                 <element signature="e#7198#7199#0" expanded="true" />
                 <element signature="e#7246#7247#0" expanded="true" />
@@ -453,7 +453,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1600695995169" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1600696059715" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -567,7 +567,7 @@
       <workItem from="1600592176788" duration="444000" />
       <workItem from="1600611266944" duration="566000" />
       <workItem from="1600623373633" duration="477000" />
-      <workItem from="1600656080911" duration="19210000" />
+      <workItem from="1600656080911" duration="19449000" />
     </task>
     <servers />
   </component>
@@ -604,13 +604,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65490000" />
+    <option name="totallyTimeSpent" value="65729000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1470" y="29" width="1747" height="992" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13313784" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13313784" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -626,7 +625,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.21" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.21" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32872927" />
@@ -1102,8 +1101,8 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/handler/codec/ByteToMessageDecoder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="427" column="31" selection-start-line="427" selection-start-column="31" selection-end-line="427" selection-end-column="31" />
+        <state relative-caret-position="627">
+          <caret line="440" column="20" lean-forward="true" selection-start-line="440" selection-start-column="20" selection-end-line="440" selection-end-column="20" />
           <folding>
             <element signature="e#7198#7199#0" expanded="true" />
             <element signature="e#7246#7247#0" expanded="true" />
