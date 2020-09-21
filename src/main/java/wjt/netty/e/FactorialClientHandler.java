@@ -77,6 +77,7 @@ public class FactorialClientHandler extends SimpleChannelInboundHandler<BigInteg
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, BigInteger msg) throws Exception {
         recvMsgCount++;
+        log.info("ctx={};msg={};recvMsgCount={};", ctx, msg, recvMsgCount);
         if (recvMsgCount == SUM_COUNT) {
             ctx.channel().closeFuture().addListener(f -> {
                 boolean offer = answers.offer(msg);
