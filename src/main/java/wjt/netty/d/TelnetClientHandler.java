@@ -14,12 +14,12 @@ import org.springframework.stereotype.Service;
 public class TelnetClientHandler implements ChannelInboundHandler {
     @Override
     public void channelRegistered(ChannelHandlerContext ctx) throws Exception {
-
+        log.info("ctx={};",ctx);
     }
 
     @Override
     public void channelUnregistered(ChannelHandlerContext ctx) throws Exception {
-
+        log.info("ctx={};",ctx);
     }
 
     @Override
@@ -45,22 +45,23 @@ public class TelnetClientHandler implements ChannelInboundHandler {
 
     @Override
     public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
-
+        log.info("ctx={};evt={};", ctx, evt);
     }
 
     @Override
     public void channelWritabilityChanged(ChannelHandlerContext ctx) throws Exception {
-
+        final boolean writable = ctx.channel().isWritable();
+        log.info("ctx={};newWritable={};", ctx, writable);
     }
 
     @Override
     public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
-
+        log.info("ctx={};",ctx);
     }
 
     @Override
     public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
-
+        log.info("ctx={};",ctx);
     }
 
     @Override

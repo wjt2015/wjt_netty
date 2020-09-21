@@ -16,12 +16,12 @@ public class TelnetServerHandler implements ChannelInboundHandler {
 
     @Override
     public void channelRegistered(ChannelHandlerContext ctx) throws Exception {
-
+        log.info("ctx={};",ctx);
     }
 
     @Override
     public void channelUnregistered(ChannelHandlerContext ctx) throws Exception {
-
+        log.info("ctx={};",ctx);
     }
 
     @Override
@@ -35,7 +35,7 @@ public class TelnetServerHandler implements ChannelInboundHandler {
         log.info("断开连接!ctx={};", ctx);
     }
 
-    private void sendMsg(ChannelHandlerContext ctx){
+    private void sendMsg(ChannelHandlerContext ctx) {
         final ByteBuf byteBuf = ctx.alloc().directBuffer(1024);
         byteBuf.writeCharSequence("欢迎你,netty!", CharsetUtil.UTF_8);
         log.info("before_writeAndFlush!ctx={};byteBuf={};", ctx, byteBuf);
@@ -57,28 +57,29 @@ public class TelnetServerHandler implements ChannelInboundHandler {
 
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
-        log.info("read_complete;ctx={};",ctx);
+        log.info("read_complete;ctx={};", ctx);
         sendMsg(ctx);
     }
 
     @Override
     public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
-
+        log.info("ctx={};evt={};",ctx,evt);
     }
 
     @Override
     public void channelWritabilityChanged(ChannelHandlerContext ctx) throws Exception {
-
+        final boolean writable = ctx.channel().isWritable();
+        log.info("ctx={};newWritable={};", ctx, writable);
     }
 
     @Override
     public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
-
+        log.info("ctx={};",ctx);
     }
 
     @Override
     public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
-
+        log.info("ctx={};",ctx);
     }
 
     @Override
