@@ -26,7 +26,6 @@ public class TelnetServerHandler implements ChannelInboundHandler {
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-
         log.info("连接建立!ctx={};", ctx);
     }
 
@@ -50,6 +49,7 @@ public class TelnetServerHandler implements ChannelInboundHandler {
             final ByteBuf byteBuf = (ByteBuf) msg;
             log.info("ctx={};byteBuf={};", ctx, byteBuf.toString(CharsetUtil.UTF_8));
             byteBuf.release();
+
         } else {
             log.info("ctx={};msg={};", ctx, msg);
         }

@@ -40,7 +40,7 @@ public class TelnetClientHandler implements ChannelInboundHandler {
 
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
-
+        log.info("ctx={};read complete;", ctx);
     }
 
     @Override

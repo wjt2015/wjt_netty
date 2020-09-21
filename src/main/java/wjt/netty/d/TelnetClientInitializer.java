@@ -25,8 +25,6 @@ public class TelnetClientInitializer extends ChannelInitializer<SocketChannel> {
     private TelnetClientHandler telnetClientHandler;
 
 
-
-
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {
         ch.pipeline().addLast(new DelimiterBasedFrameDecoder(8192, Delimiters.lineDelimiter()))

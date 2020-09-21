@@ -47,10 +47,7 @@ public class TelnetClient {
             for (String line : lines) {
                 byteBuf.writeCharSequence(line + "\r\n", CharsetUtil.UTF_8);
             }
-
             lastWriteFuture = ch.writeAndFlush(byteBuf);
-
-
 
             if (lastWriteFuture != null) {
                 //wait until all msgs are flushed before closing the channel;
