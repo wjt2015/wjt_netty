@@ -1,20 +1,16 @@
 package wjt.netty.e;
 
 import io.netty.buffer.ByteBuf;
-import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
 import io.netty.handler.codec.CorruptedFrameException;
 import io.netty.util.CharsetUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
 
 import java.math.BigInteger;
 import java.util.List;
 
 @Slf4j
-@Service
-@ChannelHandler.Sharable
 public class BigIntegerDecoder extends ByteToMessageDecoder {
 
     @Override
