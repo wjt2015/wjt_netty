@@ -7,6 +7,7 @@ import io.netty.handler.codec.MessageToByteEncoder;
 import io.netty.util.CharsetUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import wjt.common.AuxUtils;
 
 import java.math.BigInteger;
 
@@ -31,6 +32,6 @@ public class NumEncoder extends MessageToByteEncoder<Number> {
         out.writeByte(BIG_INT_PREFIX);
         out.writeInt(data.length);
         out.writeBytes(data);
-        log.info("num encode finish!ctx={};out={};", ctx, out.toString(CharsetUtil.UTF_8));
+        log.info("num encode finish!ctx={};msg={};out={};out_data={};", ctx, msg, out.toString(CharsetUtil.UTF_8), AuxUtils.byteBuf(out));
     }
 }

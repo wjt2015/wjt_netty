@@ -6,6 +6,7 @@ import io.netty.handler.codec.ByteToMessageDecoder;
 import io.netty.handler.codec.CorruptedFrameException;
 import io.netty.util.CharsetUtil;
 import lombok.extern.slf4j.Slf4j;
+import wjt.common.AuxUtils;
 
 import java.math.BigInteger;
 import java.util.List;
@@ -16,7 +17,7 @@ public class BigIntegerDecoder extends ByteToMessageDecoder {
     @Override
     protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
         int readableBytes = in.readableBytes();
-        log.info("ctx={};readableBytes={};in={};", ctx, readableBytes, in.toString(CharsetUtil.UTF_8));
+        log.info("ctx={};readableBytes={};in={};in_bytes={};", ctx, readableBytes, in.toString(CharsetUtil.UTF_8), AuxUtils.byteBuf(in));
         if (readableBytes < 5) {
             return;
         }
