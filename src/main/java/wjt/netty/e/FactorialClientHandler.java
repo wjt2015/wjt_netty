@@ -20,12 +20,12 @@ public class FactorialClientHandler extends SimpleChannelInboundHandler<BigInteg
     /**
      * 总的发送数字的个数;
      */
-    private static final int SUM_COUNT = 1000;
+    private static final int SUM_COUNT = 10;
 
     /**
      * 每轮发送数字的个数;
      */
-    private static final int COUNT_PER_LOOP = 256;
+    private static final int COUNT_PER_LOOP = 3;
 
 
     public BigInteger getFactorial() {
