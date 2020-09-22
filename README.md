@@ -36,6 +36,12 @@ mvn clean test -Dtest=wjt.netty.a.DiscardClientTest#run
 mvn clean test -Dtest=wjt.netty.a.DiscardServerTest#run 
 
 
+4, ByteToMessageDecoder流程图  
+
+5, pipeline组件图  
+
+
+
 
  
 
