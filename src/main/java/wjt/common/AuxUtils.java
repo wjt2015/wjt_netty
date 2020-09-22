@@ -17,7 +17,16 @@ public class AuxUtils {
 
         log.info("byteBuf_data={};", data);
 
-        return String.valueOf(data);
+        StringBuilder stringBuilder = new StringBuilder();
+        int i = 0, size = data.length;
+        for (byte v : data) {
+            stringBuilder.append(v);
+            i++;
+            if (i < size) {
+                stringBuilder.append(",");
+            }
+        }
+        return stringBuilder.toString();
 
     }
 
