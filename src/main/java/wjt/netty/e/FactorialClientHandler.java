@@ -69,6 +69,7 @@ public class FactorialClientHandler extends SimpleChannelInboundHandler<BigInteg
         if (next <= SUM_COUNT) {
             //全部发出完毕时添加listener;
             //future.addListener(numSendListener);
+            ctx.close();
         }
         ctx.flush();
         log.info("sendNums finish!next={};ctx={};", next, ctx);
