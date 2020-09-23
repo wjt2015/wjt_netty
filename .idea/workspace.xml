@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dde6145a-e728-4da1-b66d-581b4b61e0d3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialServerHandler.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,8 +48,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialClientHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="71" column="12" lean-forward="true" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
+            <state relative-caret-position="320">
+              <caret line="82" column="19" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,8 +72,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/e/NumEncoder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+            <state relative-caret-position="530">
+              <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,17 +102,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/wjt/netty/e/FactorialClientTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="23" column="44" lean-forward="true" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+            <state relative-caret-position="198">
+              <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/buffer/PooledByteBufAllocator.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialServerHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2361">
-              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+            <state relative-caret-position="525">
+              <caret line="31" column="105" lean-forward="true" selection-start-line="31" selection-start-column="105" selection-end-line="31" selection-end-column="105" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -230,7 +233,6 @@
         <option value="$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialServerInitializer.java" />
         <option value="$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialClientInitializer.java" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialServerHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/wjt/common/AuxUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/wjt/netty/e/BigIntegerDecoder.java" />
         <option value="$PROJECT_DIR$/src/main/java/wjt/netty/e/NumEncoder.java" />
@@ -238,6 +240,7 @@
         <option value="$PROJECT_DIR$/src/main/java/io/netty/handler/codec/MyByteToMessageDecoder.java" />
         <option value="$PROJECT_DIR$/src/test/java/wjt/netty/e/FactorialClientTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialClientHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialServerHandler.java" />
       </list>
     </option>
   </component>
@@ -373,7 +376,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1600834811825" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1600835362943" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -494,7 +497,7 @@
       <workItem from="1600656080911" duration="22007000" />
       <workItem from="1600706691104" duration="522000" />
       <workItem from="1600742278956" duration="8117000" />
-      <workItem from="1600828222667" duration="5532000" />
+      <workItem from="1600828222667" duration="6226000" />
     </task>
     <servers />
   </component>
@@ -531,7 +534,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82458000" />
+    <option name="totallyTimeSpent" value="83152000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="23" width="1793" height="1036" extended-state="0" />
@@ -782,16 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialServerHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="17" column="66" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wjt/common/AuxUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
@@ -938,16 +931,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/e/NumEncoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.20.Final/netty-all-4.1.20.Final-sources.jar!/io/netty/handler/codec/CodecOutputList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
@@ -1002,13 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/wjt/netty/e/FactorialClientTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="23" column="44" lean-forward="true" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/e/BigIntegerDecoder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -1029,10 +1005,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/wjt/netty/e/FactorialClientTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialServerHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="31" column="105" lean-forward="true" selection-start-line="31" selection-start-column="105" selection-end-line="31" selection-end-column="105" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/e/NumEncoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/e/FactorialClientHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="71" column="12" lean-forward="true" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
+        <state relative-caret-position="320">
+          <caret line="82" column="19" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

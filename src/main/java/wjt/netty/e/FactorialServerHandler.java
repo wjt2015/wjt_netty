@@ -18,6 +18,7 @@ public class FactorialServerHandler extends SimpleChannelInboundHandler<BigInteg
         log.info("read bigInt;msg={};factorial={};", msg,factorial);
         factorial = factorial.multiply(lastMultiplier);
         ctx.writeAndFlush(factorial);
+        //ctx.write(factorial);
         log.info("read and write!ctx={};lastMultiplier={};factorial={};", ctx, lastMultiplier, factorial);
     }
 
