@@ -9,12 +9,10 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioDatagramChannel;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
 
 import java.net.InetSocketAddress;
 
 @Slf4j
-@Service
 public class UDPSender {
     private final int port;
     private final InetSocketAddress destAddr;
@@ -23,6 +21,7 @@ public class UDPSender {
         this.port = port;
         this.destAddr = destAddr;
     }
+
 
     public void run() {
         EventLoopGroup group = new NioEventLoopGroup();

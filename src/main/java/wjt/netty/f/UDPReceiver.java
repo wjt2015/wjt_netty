@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
 import java.net.InetSocketAddress;
 
 @Slf4j
-@Service
 public class UDPReceiver {
 
     private final int port;
