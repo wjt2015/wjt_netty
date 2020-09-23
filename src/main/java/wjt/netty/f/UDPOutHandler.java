@@ -12,6 +12,7 @@ public class UDPOutHandler implements ChannelOutboundHandler {
     @Override
     public void bind(ChannelHandlerContext ctx, SocketAddress localAddress, ChannelPromise promise) throws Exception {
         log.info("before_bind!ctx={};localAddress={};", ctx, localAddress);
+        //使得下一个handler执行bind;
         ctx.bind(localAddress,promise);
         log.info("after_bind!ctx={};localAddress={};", ctx, localAddress);
 
