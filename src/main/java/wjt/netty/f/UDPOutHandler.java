@@ -47,12 +47,13 @@ public class UDPOutHandler implements ChannelOutboundHandler {
 
         log.info("ctx={};msg={};", ctx, msg);
         //传给下一个handler;
-        ctx.writeAndFlush(msg);
+        ctx.write(msg);
     }
 
     @Override
     public void flush(ChannelHandlerContext ctx) throws Exception {
         log.info("ctx={};", ctx);
+        ctx.flush();
     }
 
     @Override
