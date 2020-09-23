@@ -37,7 +37,7 @@ public class UDPSender {
                                     .addLast(new UDPOutHandler());
                         }
                     });
-
+            log.info("before udp sender bind!");
             ChannelFuture f = b.bind(port).sync();
             log.info("udp sender bind successfully!port={};", port);
             Channel channel = f.channel();
@@ -60,6 +60,7 @@ public class UDPSender {
                 "socks是在传输层之上的一层协议，主要功能是提供代理认证等功能。socks协议虽然是应用层协议(在TCP/IP4层协议栈里)，本身可以理解为一个信道，可以传输任何TCP/UDP内容。例如著名的科学上网软件就是基于socks协议，对通信内容进行加密实现的。"
         };
 
+        log.info("start to write!");
         for (String msg : msgs) {
             channel.write(new MyUDPData(destAddr, msg));
         }

@@ -7,11 +7,18 @@ import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.nio.NioDatagramChannel;
+import io.netty.handler.logging.LogLevel;
+import io.netty.handler.logging.LoggingHandler;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
 
 import java.net.InetSocketAddress;
 
+/**
+ 参考:
+ https://zhuanlan.zhihu.com/p/39832709
+ https://zhuanlan.zhihu.com/p/33300266
+
+ */
 @Slf4j
 public class UDPReceiver {
 

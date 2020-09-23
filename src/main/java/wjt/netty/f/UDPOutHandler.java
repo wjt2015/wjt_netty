@@ -11,7 +11,10 @@ import java.net.SocketAddress;
 public class UDPOutHandler implements ChannelOutboundHandler {
     @Override
     public void bind(ChannelHandlerContext ctx, SocketAddress localAddress, ChannelPromise promise) throws Exception {
-        log.info("bind!ctx={};localAddress={};", ctx, localAddress);
+        log.info("before_bind!ctx={};localAddress={};", ctx, localAddress);
+        ctx.bind(localAddress,promise);
+        log.info("after_bind!ctx={};localAddress={};", ctx, localAddress);
+
     }
 
     @Override
