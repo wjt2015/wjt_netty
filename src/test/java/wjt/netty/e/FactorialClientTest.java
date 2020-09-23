@@ -12,7 +12,7 @@ import javax.annotation.Resource;
 import static org.junit.Assert.*;
 
 /**
- mvn clean test -Dtest=wjt.netty.e.FactorialClientTest#run
+mvn clean test -Dtest=wjt.netty.e.FactorialClientTest#run
 
  */
 @Slf4j

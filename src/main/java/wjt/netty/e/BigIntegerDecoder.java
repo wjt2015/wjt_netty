@@ -4,6 +4,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
 import io.netty.handler.codec.CorruptedFrameException;
+import io.netty.handler.codec.MyByteToMessageDecoder;
 import io.netty.util.CharsetUtil;
 import lombok.extern.slf4j.Slf4j;
 import wjt.common.AuxUtils;
@@ -12,7 +13,7 @@ import java.math.BigInteger;
 import java.util.List;
 
 @Slf4j
-public class BigIntegerDecoder extends ByteToMessageDecoder {
+public class BigIntegerDecoder extends MyByteToMessageDecoder {
 
     @Override
     protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {

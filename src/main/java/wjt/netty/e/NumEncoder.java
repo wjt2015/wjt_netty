@@ -3,7 +3,7 @@ package wjt.netty.e;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.handler.codec.MessageToByteEncoder;
+import io.netty.handler.codec.MyMessageToByteEncoder;
 import io.netty.util.CharsetUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ import java.math.BigInteger;
 @Slf4j
 @Service
 @ChannelHandler.Sharable
-public class NumEncoder extends MessageToByteEncoder<Number> {
+public class NumEncoder extends MyMessageToByteEncoder<Number> {
 
     public static final byte BIG_INT_PREFIX = (byte) ('F');
 

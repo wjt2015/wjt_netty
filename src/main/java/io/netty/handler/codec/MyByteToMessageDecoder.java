@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * {@link ChannelInboundHandlerAdapter} which decodes bytes in a stream-like fashion from one {@link ByteBuf} to an
  * other Message type.
- *
+ * <p>
  * For example here is an implementation which reads all readable bytes from
  * the input {@link ByteBuf} and create a new {@link ByteBuf}.
  *
@@ -143,9 +143,9 @@ public abstract class MyByteToMessageDecoder extends ChannelInboundHandlerAdapte
     /**
      * A bitmask where the bits are defined as
      * <ul>
-     *     <li>{@link #STATE_INIT}</li>
-     *     <li>{@link #STATE_CALLING_CHILD_DECODE}</li>
-     *     <li>{@link #STATE_HANDLER_REMOVED_PENDING}</li>
+     * <li>{@link #STATE_INIT}</li>
+     * <li>{@link #STATE_CALLING_CHILD_DECODE}</li>
+     * <li>{@link #STATE_HANDLER_REMOVED_PENDING}</li>
      * </ul>
      */
     private byte decodeState = STATE_INIT;
@@ -159,7 +159,7 @@ public abstract class MyByteToMessageDecoder extends ChannelInboundHandlerAdapte
     /**
      * If set then only one message is decoded on each {@link #channelRead(ChannelHandlerContext, Object)}
      * call. This may be useful if you need to do some protocol upgrade and want to make sure nothing is mixed up.
-     *
+     * <p>
      * Default is {@code false} as this has performance impacts.
      */
     public void setSingleDecode(boolean singleDecode) {
@@ -169,7 +169,7 @@ public abstract class MyByteToMessageDecoder extends ChannelInboundHandlerAdapte
     /**
      * If {@code true} then only one message is decoded on each
      * {@link #channelRead(ChannelHandlerContext, Object)} call.
-     *
+     * <p>
      * Default is {@code false} as this has performance impacts.
      */
     public boolean isSingleDecode() {
@@ -250,7 +250,8 @@ public abstract class MyByteToMessageDecoder extends ChannelInboundHandlerAdapte
      * Gets called after the {@link MyByteToMessageDecoder} was removed from the actual context and it doesn't handle
      * events anymore.
      */
-    protected void handlerRemoved0(ChannelHandlerContext ctx) throws Exception { }
+    protected void handlerRemoved0(ChannelHandlerContext ctx) throws Exception {
+    }
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
@@ -264,7 +265,7 @@ public abstract class MyByteToMessageDecoder extends ChannelInboundHandlerAdapte
                 } else {
                     cumulation = cumulator.cumulate(ctx.alloc(), cumulation, data);
                 }
-                log.info("first={};data={};cumulation={};out={};",first,data,cumulation,out);
+                log.info("first={};data={};cumulation={};out={};", first, data, cumulation, out);
                 callDecode(ctx, cumulation, out);
             } catch (DecoderException e) {
                 throw e;
@@ -275,7 +276,7 @@ public abstract class MyByteToMessageDecoder extends ChannelInboundHandlerAdapte
                     numReads = 0;
                     cumulation.release();
                     cumulation = null;
-                } else if (++ numReads >= discardAfterReads) {
+                } else if (++numReads >= discardAfterReads) {
                     // We did enough reads already try to discard some bytes so we not risk to see a OOME.
                     // See https://github.com/netty/netty/issues/4275
                     numReads = 0;
@@ -309,7 +310,7 @@ public abstract class MyByteToMessageDecoder extends ChannelInboundHandlerAdapte
      * Get {@code numElements} out of the {@link CodecOutputList} and forward these through the pipeline.
      */
     static void fireChannelRead(ChannelHandlerContext ctx, CodecOutputList msgs, int numElements) {
-        for (int i = 0; i < numElements; i ++) {
+        for (int i = 0; i < numElements; i++) {
             ctx.fireChannelRead(msgs.getUnsafe(i));
         }
     }
@@ -403,9 +404,9 @@ public abstract class MyByteToMessageDecoder extends ChannelInboundHandlerAdapte
      * Called once data should be decoded from the given {@link ByteBuf}. This method will call
      * {@link #decode(ChannelHandlerContext, ByteBuf, List)} as long as decoding should take place.
      *
-     * @param ctx           the {@link ChannelHandlerContext} which this {@link MyByteToMessageDecoder} belongs to
-     * @param in            the {@link ByteBuf} from which to read data
-     * @param out           the {@link List} to which decoded messages should be added
+     * @param ctx the {@link ChannelHandlerContext} which this {@link MyByteToMessageDecoder} belongs to
+     * @param in  the {@link ByteBuf} from which to read data
+     * @param out the {@link List} to which decoded messages should be added
      */
     protected void callDecode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) {
         try {
@@ -468,10 +469,10 @@ public abstract class MyByteToMessageDecoder extends ChannelInboundHandlerAdapte
      * {@link ByteBuf} has nothing to read when return from this method or till nothing was read from the input
      * {@link ByteBuf}.
      *
-     * @param ctx           the {@link ChannelHandlerContext} which this {@link MyByteToMessageDecoder} belongs to
-     * @param in            the {@link ByteBuf} from which to read data
-     * @param out           the {@link List} to which decoded messages should be added
-     * @throws Exception    is thrown if an error occurs
+     * @param ctx the {@link ChannelHandlerContext} which this {@link MyByteToMessageDecoder} belongs to
+     * @param in  the {@link ByteBuf} from which to read data
+     * @param out the {@link List} to which decoded messages should be added
+     * @throws Exception is thrown if an error occurs
      */
     protected abstract void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception;
 
@@ -480,10 +481,10 @@ public abstract class MyByteToMessageDecoder extends ChannelInboundHandlerAdapte
      * {@link ByteBuf} has nothing to read when return from this method or till nothing was read from the input
      * {@link ByteBuf}.
      *
-     * @param ctx           the {@link ChannelHandlerContext} which this {@link MyByteToMessageDecoder} belongs to
-     * @param in            the {@link ByteBuf} from which to read data
-     * @param out           the {@link List} to which decoded messages should be added
-     * @throws Exception    is thrown if an error occurs
+     * @param ctx the {@link ChannelHandlerContext} which this {@link MyByteToMessageDecoder} belongs to
+     * @param in  the {@link ByteBuf} from which to read data
+     * @param out the {@link List} to which decoded messages should be added
+     * @throws Exception is thrown if an error occurs
      */
     final void decodeRemovalReentryProtection(ChannelHandlerContext ctx, ByteBuf in, List<Object> out)
             throws Exception {
@@ -502,7 +503,7 @@ public abstract class MyByteToMessageDecoder extends ChannelInboundHandlerAdapte
     /**
      * Is called one last time when the {@link ChannelHandlerContext} goes in-active. Which means the
      * {@link #channelInactive(ChannelHandlerContext)} was triggered.
-     *
+     * <p>
      * By default this will just call {@link #decode(ChannelHandlerContext, ByteBuf, List)} but sub-classes may
      * override this for some special cleanup operation.
      */
