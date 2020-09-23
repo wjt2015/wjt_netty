@@ -80,10 +80,11 @@ public class FactorialClientHandler extends SimpleChannelInboundHandler<BigInteg
         recvMsgCount++;
         log.info("ctx={};msg={};recvMsgCount={};", ctx, msg, recvMsgCount);
         if (recvMsgCount == SUM_COUNT) {
-            ctx.channel().closeFuture().addListener(f -> {
+            ctx.close().addListener(f -> {
                 boolean offer = answers.offer(msg);
                 log.info("ctx={};msg={};offer={};", ctx, msg, offer);
             });
+
         }
     }
 
