@@ -17,13 +17,15 @@ public class AuxUtils {
 
         log.info("byteBuf_data={};", data);
 
-        StringBuilder stringBuilder = new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder().append("[");
         int i = 0, size = data.length;
         for (byte v : data) {
             stringBuilder.append(v);
             i++;
             if (i < size) {
                 stringBuilder.append(",");
+            }else {
+                stringBuilder.append("]");
             }
         }
         return stringBuilder.toString();
