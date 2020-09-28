@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dde6145a-e728-4da1-b66d-581b4b61e0d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/netty/handler/timeout/MyIdleStateEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/HeartbeatConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/file/FileCommon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/file/FileServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/file/FileServerHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/heart/HeartCommon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/heart/HeartbeatServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/wjt/netty/heart/HeartbeatServerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/netty/handler/timeout/MyIdleStateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/netty/handler/timeout/MyIdleStateHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wjt/netty/heart/HeartbeatHandlerInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/heart/HeartbeatHandlerInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/wjt/netty/heart/HeartbeatServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/wjt/netty/heart/HeartbeatServerHandler.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,7 +16,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/file/FileServerHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="320">
               <caret line="57" column="38" lean-forward="true" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -426,7 +415,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1601301285687" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1601306332231" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -558,7 +547,7 @@
       <workItem from="1601173875332" duration="552000" />
       <workItem from="1601175827378" duration="588000" />
       <workItem from="1601206504579" duration="6140000" />
-      <workItem from="1601259925287" duration="14520000" />
+      <workItem from="1601259925287" duration="14717000" />
     </task>
     <servers />
   </component>
@@ -595,13 +584,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118927000" />
+    <option name="totallyTimeSpent" value="119124000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1457" y="23" width="1786" height="1035" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1146789" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1146789" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -617,7 +606,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.24178155" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.24178155" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32872927" />
@@ -1062,7 +1051,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/wjt/netty/file/FileServerHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="320">
           <caret line="57" column="38" lean-forward="true" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
