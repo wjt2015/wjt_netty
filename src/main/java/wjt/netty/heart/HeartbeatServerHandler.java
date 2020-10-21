@@ -8,8 +8,10 @@ import io.netty.channel.ChannelInboundHandler;
 import io.netty.handler.timeout.IdleStateEvent;
 import io.netty.util.CharsetUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 @Slf4j
+@Component
 public class HeartbeatServerHandler implements ChannelInboundHandler {
 
 
@@ -28,6 +30,7 @@ public class HeartbeatServerHandler implements ChannelInboundHandler {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         log.info("ctx={};", ctx);
+        ctx.writeAndFlush(HEARTBEAT_SEQUENCE);
     }
 
     @Override
@@ -37,7 +40,8 @@ public class HeartbeatServerHandler implements ChannelInboundHandler {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        log.info("ctx={};msg={};", ctx, msg);
+        final ByteBuf byteBuf=(ByteBuf)msg;
+        log.info("ctx={};msg={};msg_str={};", ctx, msg,byteBuf.toString(CharsetUtil.UTF_8));
         ctx.fireChannelRead(msg);
     }
 
@@ -57,7 +61,7 @@ public class HeartbeatServerHandler implements ChannelInboundHandler {
             IdleStateEvent event = (IdleStateEvent) evt;
             switch (event.state()) {
                 case ALL_IDLE:
-                    type = "all idle";
+                    type = "all_idle";
                     break;
                 case READER_IDLE:
                     type = "read_idle";

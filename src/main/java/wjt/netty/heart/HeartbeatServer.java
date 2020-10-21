@@ -12,6 +12,8 @@ import io.netty.handler.logging.LoggingHandler;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+
 /**
  * 心跳服务器;
  * 客户端:telnet 127.0.0.1 10009
@@ -20,6 +22,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class HeartbeatServer {
     private final int port;
+
+    @Resource
+    private HeartbeatHandlerInitializer heartbeatHandlerInitializer;
 
 
     public HeartbeatServer(int port) {
@@ -38,7 +43,7 @@ public class HeartbeatServer {
             b.group(bossGroup, workerGroup).channel(NioServerSocketChannel.class)
                     .option(ChannelOption.SO_BACKLOG, 128)
                     .handler(new LoggingHandler(LogLevel.INFO))
-                    .childHandler(new HeartbeatHandlerInitializer());
+                    .childHandler(heartbeatHandlerInitializer);
 
             ChannelFuture f = b.bind(port).sync();
             log.info("server bind successfully!b={};port={};", b, port);
