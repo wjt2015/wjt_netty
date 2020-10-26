@@ -15,6 +15,7 @@ import io.netty.handler.codec.http.HttpResponseStatus;
 import io.netty.handler.codec.http.HttpVersion;
 import io.netty.handler.codec.http.LastHttpContent;
 import io.netty.handler.stream.ChunkedFile;
+import io.netty.handler.stream.MyChunkedFile;
 import io.netty.util.CharsetUtil;
 import lombok.extern.slf4j.Slf4j;
 
@@ -104,7 +105,7 @@ public class HttpFileServerHandler extends SimpleChannelInboundHandler<FullHttpR
                 ctx.write(httpResponse);
             }
             //发送文件;
-            ctx.write(new ChunkedFile(randomAccessFile, 0, fileSize, 8192), ctx.newProgressivePromise())
+            ctx.write(new MyChunkedFile(randomAccessFile, 0, fileSize, 8192), ctx.newProgressivePromise())
                     .addListener(new ChannelProgressiveFutureListener() {
                         @Override
                         public void operationProgressed(ChannelProgressiveFuture future, long progress, long total) throws Exception {
