@@ -11,6 +11,7 @@ import io.netty.handler.codec.http.HttpRequestDecoder;
 import io.netty.handler.codec.http.HttpResponseEncoder;
 import io.netty.handler.codec.http.MyHttpObjectAggregator;
 import io.netty.handler.stream.ChunkedWriteHandler;
+import io.netty.handler.stream.MyChunkedWriteHandler;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -54,7 +55,7 @@ public class HttpFileServer {
                                     //http编码器;
                                     .addLast("http_encoder", new HttpResponseEncoder())
                                     //支持异步发送码流(大文件传输),但不占用过多的内存;
-                                    .addLast("http_chunked", new ChunkedWriteHandler())
+                                    .addLast("http_chunked", new MyChunkedWriteHandler())
                                     //加入自定义的业务逻辑;
                                     .addLast("file_server_handler", new HttpFileServerHandler(url));
                         }
