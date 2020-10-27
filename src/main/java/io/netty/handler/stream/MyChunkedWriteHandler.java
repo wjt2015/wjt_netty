@@ -103,7 +103,9 @@ public class MyChunkedWriteHandler extends ChannelDuplexHandler {
         if (ctx == null) {
             return;
         }
-        if (ctx.executor().inEventLoop()) {
+        final boolean inEventLoop = ctx.executor().inEventLoop();
+        log.info("this.ctx={};inEventLoop={};", this.ctx, inEventLoop);
+        if (inEventLoop) {
             try {
                 doFlush(ctx);
             } catch (Exception e) {
@@ -199,14 +201,18 @@ public class MyChunkedWriteHandler extends ChannelDuplexHandler {
 
     private void doFlush(final ChannelHandlerContext ctx) throws Exception {
         final Channel channel = ctx.channel();
-        if (!channel.isActive()) {
+        final boolean active = channel.isActive();
+        log.info("active={};channel={};", active, channel);
+        if (!active) {
             discard(null);
             return;
         }
 
         boolean requiresFlush = true;
         ByteBufAllocator allocator = ctx.alloc();
-        while (channel.isWritable()) {
+        final boolean writable = channel.isWritable();
+        log.info("active={};writable={};channel={};", active, writable, channel);
+        while (writable) {
             if (currentWrite == null) {
                 currentWrite = queue.poll();
             }
@@ -225,15 +231,13 @@ public class MyChunkedWriteHandler extends ChannelDuplexHandler {
                 try {
                     message = chunks.readChunk(allocator);
                     endOfInput = chunks.isEndOfInput();
-
-                    log.info("message={};endOfInput={};", message, endOfInput);
-
                     if (message == null) {
                         // No need to suspend when reached at the end.
                         suspend = !endOfInput;
                     } else {
                         suspend = false;
                     }
+                    log.info("message={};endOfInput={};suspend={};", message, endOfInput, suspend);
                 } catch (final Throwable t) {
                     this.currentWrite = null;
 
@@ -368,4 +372,6 @@ public class MyChunkedWriteHandler extends ChannelDuplexHandler {
             }
         }
     }
+
+
 }

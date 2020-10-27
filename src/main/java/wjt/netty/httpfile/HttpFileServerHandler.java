@@ -58,7 +58,7 @@ public class HttpFileServerHandler extends SimpleChannelInboundHandler<FullHttpR
 
         final String uri = request.uri();
         //根据uri构造本地文件路径;
-        final String path = santinizeUri(uri);
+        final String path = sanitizeUri(uri);
         if (path == null) {
             //403;路径不合法;
             sendError(ctx, HttpResponseStatus.FORBIDDEN);
@@ -134,7 +134,7 @@ public class HttpFileServerHandler extends SimpleChannelInboundHandler<FullHttpR
         }
     }
 
-    private String santinizeUri(String uri) {
+    private String sanitizeUri(String uri) {
         try {
             String decode = URLDecoder.decode(uri, "UTF-8");
             decode = (decode.startsWith("/") ? decode.replaceFirst("/", "") : decode);

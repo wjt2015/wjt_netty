@@ -8,7 +8,6 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.http.HttpRequestDecoder;
-import io.netty.handler.codec.http.HttpResponseEncoder;
 import io.netty.handler.codec.http.MyHttpObjectAggregator;
 import io.netty.handler.codec.http.MyHttpResponseEncoder;
 import io.netty.handler.stream.MyChunkedWriteHandler;
@@ -16,7 +15,8 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * http文件下载;
- * 参考,(https://blog.csdn.net/shengqianfeng/article/details/80849575);
+ * 参考,(https://blog.csdn.net/shengqianfeng/article/details/80849575),
+ * (https://blog.csdn.net/suifeng3051/article/details/38679507?utm_source=blogxgwz3);
  */
 @Slf4j
 public class HttpFileServer {
