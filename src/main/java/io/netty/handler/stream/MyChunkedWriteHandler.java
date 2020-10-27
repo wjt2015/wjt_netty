@@ -173,8 +173,6 @@ public class MyChunkedWriteHandler extends ChannelDuplexHandler {
             }
             Object message = currentWrite.msg;
             log.info("message={};", message);
-
-
             if (message instanceof ChunkedInput) {
                 ChunkedInput<?> in = (ChunkedInput<?>) message;
                 try {
@@ -281,6 +279,8 @@ public class MyChunkedWriteHandler extends ChannelDuplexHandler {
                             currentWrite.progress(chunks.progress(), chunks.length());
                             currentWrite.success(chunks.length());
                             closeInput(chunks);
+
+                            log.info("write_and_close_finish!");
                         }
                     });
                 } else if (channel.isWritable()) {
@@ -338,6 +338,8 @@ public class MyChunkedWriteHandler extends ChannelDuplexHandler {
             if (logger.isWarnEnabled()) {
                 logger.warn("Failed to close a chunked input.", t);
             }
+        } finally {
+            log.info("chunks close finish!chunks={};", chunks);
         }
     }
 

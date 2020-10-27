@@ -14,6 +14,8 @@ import io.netty.handler.stream.MyChunkedWriteHandler;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+
 /**
  * http文件下载;
  * 参考,(https://blog.csdn.net/shengqianfeng/article/details/80849575),
@@ -27,7 +29,13 @@ public class HttpFileServer {
     private String url;
 
     public static final String DEFAULT_URL = "/Users/jintao9/linux2014/test/data";
+
+
     public static final String DEFAULT_DIR = "/Users/jintao9/linux2014/test/data/";
+
+
+    @Resource
+    private HttpFileServerHandler httpFileServerHandler;
 
     public HttpFileServer(int port, String url) {
         this.port = port;
@@ -64,7 +72,7 @@ public class HttpFileServer {
                                     //支持异步发送码流(大文件传输),但不占用过多的内存;
                                     .addLast("http_chunked", new MyChunkedWriteHandler())
                                     //加入自定义的业务逻辑;
-                                    .addLast("file_server_handler", new HttpFileServerHandler(url));
+                                    .addLast("file_server_handler", httpFileServerHandler);
                         }
                     });
 

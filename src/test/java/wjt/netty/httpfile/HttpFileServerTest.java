@@ -28,6 +28,9 @@ public class HttpFileServerTest {
     @Resource
     private HttpFileServer httpFileServer;
 
+    @Resource
+    private LogAspect logAspect;
+
 /*    @Before
     public void init() {
         httpFileServer = new HttpFileServer(10009);
@@ -35,6 +38,9 @@ public class HttpFileServerTest {
 
     @Test
     public void run() {
+        log.info("logAspect={};", logAspect);
+
+
         httpFileServer.run();
         log.info("httpFileServer finish!");
     }

@@ -2,6 +2,7 @@ package wjt.netty.httpfile;
 
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFutureListener;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelProgressiveFuture;
 import io.netty.channel.ChannelProgressiveFutureListener;
@@ -14,7 +15,6 @@ import io.netty.handler.codec.http.HttpResponse;
 import io.netty.handler.codec.http.HttpResponseStatus;
 import io.netty.handler.codec.http.HttpVersion;
 import io.netty.handler.codec.http.LastHttpContent;
-import io.netty.handler.stream.ChunkedFile;
 import io.netty.handler.stream.MyChunkedFile;
 import io.netty.util.CharsetUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -27,6 +27,7 @@ import java.net.URLDecoder;
 import java.util.regex.Pattern;
 
 @Slf4j
+@ChannelHandler.Sharable
 public class HttpFileServerHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
 
     private String url;
@@ -42,6 +43,7 @@ public class HttpFileServerHandler extends SimpleChannelInboundHandler<FullHttpR
     }
 
     protected void messageReceived(ChannelHandlerContext ctx, FullHttpRequest request) {
+
         if (request.decoderResult().isFailure()) {
             //400;
             log.error("decode error!");
@@ -117,7 +119,7 @@ public class HttpFileServerHandler extends SimpleChannelInboundHandler<FullHttpR
 
                         @Override
                         public void operationComplete(ChannelProgressiveFuture future) throws Exception {
-                            log.info("transfer complete!close the randomAccessFile!");
+                            log.info("transfer complete!");
                         }
                     });
             //应用chunk编码时,最后需要发送一个结束编码的看空消息体进行标记,表示所有消息体已成功发送完成;
@@ -125,7 +127,6 @@ public class HttpFileServerHandler extends SimpleChannelInboundHandler<FullHttpR
         } catch (Exception e) {
             log.error("build httpResonse error!", e);
         }
-
     }
 
     @Override
