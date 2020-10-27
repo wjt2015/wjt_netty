@@ -89,8 +89,11 @@ public class HttpFileServerHandler extends SimpleChannelInboundHandler<FullHttpR
             return;
         }
 
+        log.info("ctx={};request={};", ctx, request);
         HttpResponse httpResponse = null;
-        try (RandomAccessFile randomAccessFile = new RandomAccessFile(file, "r")) {
+        try {
+            RandomAccessFile randomAccessFile = new RandomAccessFile(file, "r");
+
             final long fileSize = randomAccessFile.length();
             //创建响应对象;
             httpResponse = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK);
@@ -114,7 +117,7 @@ public class HttpFileServerHandler extends SimpleChannelInboundHandler<FullHttpR
 
                         @Override
                         public void operationComplete(ChannelProgressiveFuture future) throws Exception {
-                            log.info("transfer complete!");
+                            log.info("transfer complete!close the randomAccessFile!");
                         }
                     });
             //应用chunk编码时,最后需要发送一个结束编码的看空消息体进行标记,表示所有消息体已成功发送完成;
@@ -170,7 +173,7 @@ public class HttpFileServerHandler extends SimpleChannelInboundHandler<FullHttpR
         ret.append("<ul>");
         ret.append("<li>链接：<a href=\"../\">..</a></li>\r\n");
 
-        log.info("dir.listFiles={};",dir.listFiles());
+        log.info("dir.listFiles={};", dir.listFiles());
         //遍历文件,添加超链接;
         for (File f : dir.listFiles()) {
             //文件过滤;

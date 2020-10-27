@@ -12,6 +12,7 @@ import io.netty.handler.codec.http.MyHttpObjectAggregator;
 import io.netty.handler.codec.http.MyHttpResponseEncoder;
 import io.netty.handler.stream.MyChunkedWriteHandler;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 
 /**
  * http文件下载;
@@ -20,6 +21,7 @@ import lombok.extern.slf4j.Slf4j;
  * (https://github.com/netty/netty/tree/4.1);
  */
 @Slf4j
+@Service
 public class HttpFileServer {
     private final int port;
     private String url;
@@ -36,6 +38,10 @@ public class HttpFileServer {
 
     public HttpFileServer(int port) {
         this(port, DEFAULT_URL);
+    }
+
+    public HttpFileServer() {
+        this(10009);
     }
 
     public void run() {

@@ -164,6 +164,10 @@ public class MyChunkedFile implements ChunkedInput<ByteBuf> {
             buf.writerIndex(chunkSize);
             this.offset = offset + chunkSize;
             release = false;
+            log.info("this.offset={};buf={};", this.offset, buf);
+            return buf;
+        } catch (Exception e) {
+            log.error("read file error!", e);
             return buf;
         } finally {
             if (release) {

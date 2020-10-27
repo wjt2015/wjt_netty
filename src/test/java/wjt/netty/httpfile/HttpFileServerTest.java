@@ -7,7 +7,11 @@ import io.netty.handler.stream.MyChunkedFile;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import javax.annotation.Resource;
 import java.io.RandomAccessFile;
 
 import static org.junit.Assert.*;
@@ -17,14 +21,17 @@ import static org.junit.Assert.*;
  * http://127.0.0.1:10009/java
  */
 @Slf4j
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = {HttpFileConfig.class})
 public class HttpFileServerTest {
 
+    @Resource
     private HttpFileServer httpFileServer;
 
-    @Before
+/*    @Before
     public void init() {
         httpFileServer = new HttpFileServer(10009);
-    }
+    }*/
 
     @Test
     public void run() {
