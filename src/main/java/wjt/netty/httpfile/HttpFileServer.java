@@ -16,7 +16,8 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * http文件下载;
  * 参考,(https://blog.csdn.net/shengqianfeng/article/details/80849575),
- * (https://blog.csdn.net/suifeng3051/article/details/38679507?utm_source=blogxgwz3);
+ * (https://blog.csdn.net/suifeng3051/article/details/38679507?utm_source=blogxgwz3),
+ * (https://github.com/netty/netty/tree/4.1);
  */
 @Slf4j
 public class HttpFileServer {

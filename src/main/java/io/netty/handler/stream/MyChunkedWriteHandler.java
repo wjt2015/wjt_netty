@@ -29,6 +29,7 @@ import io.netty.channel.ChannelPromise;
 import io.netty.util.ReferenceCountUtil;
 import io.netty.util.internal.logging.InternalLogger;
 import io.netty.util.internal.logging.InternalLoggerFactory;
+import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
 import java.nio.channels.ClosedChannelException;
@@ -133,6 +134,7 @@ public class MyChunkedWriteHandler extends ChannelDuplexHandler {
 
     @Override
     public void write(ChannelHandlerContext ctx, Object msg, ChannelPromise promise) throws Exception {
+        log.info("ctx={};msg={};promise={};", ctx, msg, promise);
         queue.add(new PendingWrite(msg, promise));
     }
 
@@ -222,8 +224,9 @@ public class MyChunkedWriteHandler extends ChannelDuplexHandler {
             }
             final PendingWrite currentWrite = this.currentWrite;
             final Object pendingMessage = currentWrite.msg;
-
-            if (pendingMessage instanceof ChunkedInput) {
+            final boolean isChunkedInput = (pendingMessage instanceof ChunkedInput);
+            log.info("currentWrite={};isChunkedInput={};", currentWrite, isChunkedInput);
+            if (isChunkedInput) {
                 final ChunkedInput<?> chunks = (ChunkedInput<?>) pendingMessage;
                 boolean endOfInput;
                 boolean suspend;
@@ -338,6 +341,7 @@ public class MyChunkedWriteHandler extends ChannelDuplexHandler {
         }
     }
 
+    @ToString
     private static final class PendingWrite {
         final Object msg;
         final ChannelPromise promise;

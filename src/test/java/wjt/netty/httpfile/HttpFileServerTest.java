@@ -14,6 +14,7 @@ import static org.junit.Assert.*;
 
 /**
  * mvn clean test -Dtest=wjt.netty.httpfile.HttpFileServerTest#run
+ * http://127.0.0.1:10009/java
  */
 @Slf4j
 public class HttpFileServerTest {
