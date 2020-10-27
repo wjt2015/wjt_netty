@@ -10,7 +10,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.http.HttpRequestDecoder;
 import io.netty.handler.codec.http.HttpResponseEncoder;
 import io.netty.handler.codec.http.MyHttpObjectAggregator;
-import io.netty.handler.stream.ChunkedWriteHandler;
+import io.netty.handler.codec.http.MyHttpResponseEncoder;
 import io.netty.handler.stream.MyChunkedWriteHandler;
 import lombok.extern.slf4j.Slf4j;
 
@@ -53,7 +53,7 @@ public class HttpFileServer {
                                     //将多个消息转换为单一的FullHttpRequest或FullHttpResponse;
                                     .addLast("http_aggregator", new MyHttpObjectAggregator(1 << 16))
                                     //http编码器;
-                                    .addLast("http_encoder", new HttpResponseEncoder())
+                                    .addLast("http_encoder", new MyHttpResponseEncoder())
                                     //支持异步发送码流(大文件传输),但不占用过多的内存;
                                     .addLast("http_chunked", new MyChunkedWriteHandler())
                                     //加入自定义的业务逻辑;
