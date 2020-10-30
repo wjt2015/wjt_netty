@@ -140,11 +140,13 @@ public class MyChunkedWriteHandler extends ChannelDuplexHandler {
 
     @Override
     public void flush(ChannelHandlerContext ctx) throws Exception {
+        log.info("ctx={};", ctx);
         doFlush(ctx);
     }
 
     @Override
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
+        log.info("ctx={};", ctx);
         doFlush(ctx);
         ctx.fireChannelInactive();
     }
@@ -212,7 +214,7 @@ public class MyChunkedWriteHandler extends ChannelDuplexHandler {
         ByteBufAllocator allocator = ctx.alloc();
         final boolean writable = channel.isWritable();
         log.info("active={};writable={};channel={};", active, writable, channel);
-        while (writable) {
+        while (channel.isWritable()) {
             if (currentWrite == null) {
                 currentWrite = queue.poll();
             }
@@ -240,6 +242,7 @@ public class MyChunkedWriteHandler extends ChannelDuplexHandler {
                     }
                     log.info("message={};endOfInput={};suspend={};", message, endOfInput, suspend);
                 } catch (final Throwable t) {
+                    log.error("read chunk error!message={};", message, t);
                     this.currentWrite = null;
 
                     if (message != null) {
@@ -265,6 +268,7 @@ public class MyChunkedWriteHandler extends ChannelDuplexHandler {
                 }
 
                 ChannelFuture f = ctx.write(message);
+                log.info("write_finish!ctx={};message={};f={};", ctx, message, f);
                 if (endOfInput) {
                     this.currentWrite = null;
 

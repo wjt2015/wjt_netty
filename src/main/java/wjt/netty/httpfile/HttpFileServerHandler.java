@@ -103,6 +103,7 @@ public class HttpFileServerHandler extends SimpleChannelInboundHandler<FullHttpR
             httpResponse.headers().set("Content-Length", String.valueOf(fileSize));
             setContentTypeHeader(httpResponse, file);
             httpResponse.headers().set("connection", "keep-alive");
+            httpResponse.headers().set("transfer-encoding", "chunked");
 
             //发出response;
             if (httpResponse != null) {

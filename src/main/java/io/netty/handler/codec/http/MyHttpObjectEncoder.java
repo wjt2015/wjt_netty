@@ -40,7 +40,7 @@ import static io.netty.handler.codec.http.HttpConstants.LF;
  * a {@link ByteBuf}.
  *
  * <h3>Extensibility</h3>
- *
+ * <p>
  * Please note that this encoder is designed to be extended to implement
  * a protocol derived from HTTP, such as
  * <a href="http://en.wikipedia.org/wiki/Real_Time_Streaming_Protocol">RTSP</a> and
@@ -52,7 +52,7 @@ import static io.netty.handler.codec.http.HttpConstants.LF;
 public abstract class MyHttpObjectEncoder<H extends HttpMessage> extends MyMessageToMessageEncoder<Object> {
     static final int CRLF_SHORT = (CR << 8) | LF;
     private static final int ZERO_CRLF_MEDIUM = ('0' << 16) | CRLF_SHORT;
-    private static final byte[] ZERO_CRLF_CRLF = { '0', CR, LF, CR, LF };
+    private static final byte[] ZERO_CRLF_CRLF = {'0', CR, LF, CR, LF};
     private static final ByteBuf CRLF_BUF = unreleasableBuffer(directBuffer(2).writeByte(CR).writeByte(LF));
     private static final ByteBuf ZERO_CRLF_CRLF_BUF = unreleasableBuffer(directBuffer(ZERO_CRLF_CRLF.length)
             .writeBytes(ZERO_CRLF_CRLF));
@@ -89,7 +89,7 @@ public abstract class MyHttpObjectEncoder<H extends HttpMessage> extends MyMessa
                 throw new IllegalStateException("unexpected message type: " + StringUtil.simpleClassName(msg));
             }
 
-            @SuppressWarnings({ "unchecked", "CastConflictsWithInstanceof" })
+            @SuppressWarnings({"unchecked", "CastConflictsWithInstanceof"})
             H m = (H) msg;
 
             buf = ctx.alloc().buffer((int) headersEncodedSizeAccumulator);
@@ -105,6 +105,8 @@ public abstract class MyHttpObjectEncoder<H extends HttpMessage> extends MyMessa
 
             headersEncodedSizeAccumulator = HEADERS_WEIGHT_NEW * padSizeForAccumulation(buf.readableBytes()) +
                     HEADERS_WEIGHT_HISTORICAL * headersEncodedSizeAccumulator;
+
+            log.info("headersEncodedSizeAccumulator={};buf={};", headersEncodedSizeAccumulator, buf.toString(CharsetUtil.UTF_8));
         }
 
         // Bypass the encoder in case of an empty buffer, so that the following idiom works:
@@ -277,6 +279,7 @@ public abstract class MyHttpObjectEncoder<H extends HttpMessage> extends MyMessa
     /**
      * Add some additional overhead to the buffer. The rational is that it is better to slightly over allocate and waste
      * some memory, rather than under allocate and require a resize/copy.
+     *
      * @param readableBytes The readable bytes in the buffer.
      * @return The {@code readableBytes} with some additional padding.
      */

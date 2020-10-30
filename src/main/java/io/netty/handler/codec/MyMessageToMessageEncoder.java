@@ -30,7 +30,7 @@ import java.util.List;
 
 /**
  * {@link ChannelOutboundHandlerAdapter} which encodes from one message to an other message
- *
+ * <p>
  * For example here is an implementation which decodes an {@link Integer} to an {@link String}.
  *
  * <pre>
@@ -44,7 +44,7 @@ import java.util.List;
  *         }
  *     }
  * </pre>
- *
+ * <p>
  * Be aware that you need to call {@link ReferenceCounted#retain()} on messages that are just passed through if they
  * are of type {@link ReferenceCounted}. This is needed as the {@link MyMessageToMessageEncoder} will call
  * {@link ReferenceCounted#release()} on encoded messages.
@@ -64,7 +64,7 @@ public abstract class MyMessageToMessageEncoder<I> extends ChannelOutboundHandle
     /**
      * Create a new instance
      *
-     * @param outboundMessageType   The type of messages to match and so encode
+     * @param outboundMessageType The type of messages to match and so encode
      */
     protected MyMessageToMessageEncoder(Class<? extends I> outboundMessageType) {
         matcher = TypeParameterMatcher.get(outboundMessageType);
@@ -88,6 +88,8 @@ public abstract class MyMessageToMessageEncoder<I> extends ChannelOutboundHandle
                 I cast = (I) msg;
                 try {
                     encode(ctx, cast, out);
+                } catch (Exception e) {
+                    log.error("encode cast error!msg={};cast={};", msg, cast, e);
                 } finally {
                     ReferenceCountUtil.release(cast);
                 }
@@ -103,8 +105,10 @@ public abstract class MyMessageToMessageEncoder<I> extends ChannelOutboundHandle
                 ctx.write(msg, promise);
             }
         } catch (EncoderException e) {
+            log.error("encode error!", e);
             throw e;
         } catch (Throwable t) {
+            log.error("other error when encoding!", t);
             throw new EncoderException(t);
         } finally {
             if (out != null) {
@@ -116,7 +120,7 @@ public abstract class MyMessageToMessageEncoder<I> extends ChannelOutboundHandle
                     // See https://github.com/netty/netty/issues/2525
                     ChannelPromise voidPromise = ctx.voidPromise();
                     boolean isVoidPromise = promise == voidPromise;
-                    for (int i = 0; i < sizeMinusOne; i ++) {
+                    for (int i = 0; i < sizeMinusOne; i++) {
                         ChannelPromise p;
                         if (isVoidPromise) {
                             p = voidPromise;
@@ -136,11 +140,11 @@ public abstract class MyMessageToMessageEncoder<I> extends ChannelOutboundHandle
      * Encode from one message to an other. This method will be called for each written message that can be handled
      * by this encoder.
      *
-     * @param ctx           the {@link ChannelHandlerContext} which this {@link MyMessageToMessageEncoder} belongs to
-     * @param msg           the message to encode to an other one
-     * @param out           the {@link List} into which the encoded msg should be added
-     *                      needs to do some kind of aggregation
-     * @throws Exception    is thrown if an error occurs
+     * @param ctx the {@link ChannelHandlerContext} which this {@link MyMessageToMessageEncoder} belongs to
+     * @param msg the message to encode to an other one
+     * @param out the {@link List} into which the encoded msg should be added
+     *            needs to do some kind of aggregation
+     * @throws Exception is thrown if an error occurs
      */
     protected abstract void encode(ChannelHandlerContext ctx, I msg, List<Object> out) throws Exception;
 }
