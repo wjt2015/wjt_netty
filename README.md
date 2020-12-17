@@ -1,3 +1,5 @@
+{
+
 # wjt_netty
 学习netty源码
 
@@ -39,6 +41,16 @@ mvn clean test -Dtest=wjt.netty.a.DiscardServerTest#run
 4, ByteToMessageDecoder流程图  
 
 5, pipeline组件图  
+
+}
+----
+{
+20201217,
+基于netty构建弹幕系统:
+https://v.qq.com/x/page/o0861bf7bjs.html
+}
+----
+
 
 
 

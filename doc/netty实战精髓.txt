@@ -1,0 +1,10 @@
+{
+netty实战精髓,
+(https://www.w3cschool.cn/search?w=netty);
+(https://www.w3cschool.cn/essential_netty_in_action/essential_netty_in_action-s1ed28b3.html);
+(https://github.com/waylau/essential-netty-in-action);
+实例代码在wjt.nettyEssence;
+
+
+
+}
